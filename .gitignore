@@ -1,0 +1,14 @@
+.wechat-venv/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+~$*
+outputs/
+图片缓存/
+表图缓存/
+文章.sqlite3*
+Thumbs.db
+.DS_Store
