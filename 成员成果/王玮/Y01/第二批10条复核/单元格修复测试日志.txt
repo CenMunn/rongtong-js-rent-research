@@ -1,0 +1,16 @@
+test_decimal_tail (test_wechat_cells.NumericCells.test_decimal_tail) ... ok
+test_integer_tail (test_wechat_cells.NumericCells.test_integer_tail) ... ok
+test_no_cross_cell_digit (test_wechat_cells.NumericCells.test_no_cross_cell_digit) ... ok
+test_periods (test_wechat_cells.NumericCells.test_periods) ... ok
+test_range (test_wechat_cells.NumericCells.test_range) ... ok
+test_reflow_cannot_rewrite_prefix (test_wechat_cells.NumericCells.test_reflow_cannot_rewrite_prefix) ... ok
+test_reflow_low_confidence_not_accepted (test_wechat_cells.NumericCells.test_reflow_low_confidence_not_accepted) ... ok
+test_reflow_suffix (test_wechat_cells.NumericCells.test_reflow_suffix) ... ok
+test_small_tail_digit_with_internal_gap (test_wechat_cells.NumericCells.test_small_tail_digit_with_internal_gap) ... ok
+test_two_decimals (test_wechat_cells.NumericCells.test_two_decimals) ... ok
+test_uncovered_digit_in_nonempty_cell (test_wechat_cells.NumericCells.test_uncovered_digit_in_nonempty_cell) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.021s
+
+OK

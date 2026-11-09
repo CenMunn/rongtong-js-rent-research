@@ -9,6 +9,7 @@ from PIL import Image
 from io import BytesIO
 from lxml import html
 from wechat_crawler import export_csv
+from wechat_cells import numeric_cell_text,repair_numeric_cell
 BASE=Path(__file__).resolve().parent
 ALBUMS=BASE/'outputs/公众号片区采集'
 OUT=BASE/'outputs/群内提交/四片区基本情况表补采'
@@ -196,6 +197,11 @@ def extract_cells(im,tokens):
             key=keys[0];row[key]='\n'.join(filter(None,[row.get(key),v]))
             if key in ('竞价保证金','竞价招租底价','房屋面积','土地面积'):
                 row[key+'表头原文']=hs
+                row[key+'单元格原文']=v
+                normalized=numeric_cell_text(v)
+                if normalized!=v:
+                    row[key]=normalized
+                    row[key+'拼接说明']='同一数值单元格连续数字跨行拼接，原文和坐标保留，需核图'
         elif v:
             label='、'.join(keys) if keys else f'列{j}'
             unmap.append(f'{label}：{v}')
@@ -236,7 +242,7 @@ def publish():
         for v in rr:wide.append(dict(base,**v))
         for j,t in nn:notes.append(dict(base,图内行序=j,说明区文字OCR=t))
  k=['片区','原文链接','标题','发布日期','图序','图片链接','ID']
- export_csv(OUT/'01_项目表格行.csv',k+['图内行序','项目名称']+COLS+[c+'表头原文' for c in ('房屋面积','土地面积','竞价保证金','竞价招租底价')]+['未映射或合并列OCR','表头匹配依据'],wide)
+ export_csv(OUT/'01_项目表格行.csv',k+['图内行序','项目名称']+COLS+[c+'表头原文' for c in ('房屋面积','土地面积','竞价保证金','竞价招租底价')]+[c+s for c in ('房屋面积','土地面积','竞价保证金','竞价招租底价') for s in ('单元格原文','拼接说明')]+['未映射或合并列OCR','表头匹配依据'],wide)
  export_csv(OUT/'02_特别说明等合并区.csv',k+['图内行序','说明区文字OCR'],notes)
  export_csv(OUT/'03_全部单元格含表头.csv',k+['判定','图内行序','图内列序','左','上','右','下','区域','对应表头OCR','内容OCR'],cells)
  export_csv(OUT/'04_网格候选图全文OCR.csv',k+['判定','识别问题','全图OCR'],texts)
@@ -295,16 +301,24 @@ def fill_blanks(n,total):
     out=dest/f.name
     if out.exists():
         prior=json.loads(out.read_text('utf8'))
-        if 'refill' not in sys.argv or prior.get('tokens') or prior.get('version')==2:continue
+        if prior.get('version',0)>=3 and 'refill' not in sys.argv:continue
+    else:prior={}
     tokens=json.loads(f.read_text('utf8')).get('tokens',[])
+    tokens=tokens+prior.get('tokens',[])
     full=''.join(t for _,t,_ in tokens)
     if not re.search('竞价|招租|承租|保证金|房地产|土地面积|房屋面积',full):continue
     im=Image.open(WORK/'图'/(f.stem+'.png')).convert('RGB')
     cc,_,_=extract_cells(im,tokens)
     arr=np.asarray(im);g=cv2.cvtColor(arr,cv2.COLOR_RGB2GRAY)
-    strips=[];boxes=[]
+    strips=[];boxes=[];numeric_extra=[];audits=[]
     for ri,ci,x1,y1,x2,y2,_,_,v in cc:
-        if v.strip() or x2-x1<12 or y2-y1<10:continue
+        if x2-x1<12 or y2-y1<10:continue
+        if v.strip():
+            header=next((cell[7] for cell in cc if cell[0]==ri and cell[1]==ci),'')
+            if category(header) in ('房屋面积','土地面积','竞价保证金','竞价招租底价'):
+                extra,audit=repair_numeric_cell(arr,(x1,y1,x2,y2),tokens,engine.text_recognizer)
+                audit.update(行=ri,列=ci,表头=header);audits.append(audit);numeric_extra.extend(extra)
+            continue
         left,top,right,bottom=x1+3,y1+3,x2-2,y2-2
         roi=g[top:bottom,left:right]
         if not roi.size:continue
@@ -323,7 +337,7 @@ def fill_blanks(n,total):
     if strips:
         results,_=engine.text_recognizer(strips)
         extra=[[box,txt,str(score)] for box,(txt,score) in zip(boxes,results) if txt and score>=.70]
-    dump(out,{'tokens':extra,'version':2})
+    dump(out,{'tokens':prior.get('tokens',[])+numeric_extra+extra,'version':3,'数值格补读记录':audits})
 if __name__=='__main__' and 'fill' in sys.argv:fill_blanks(int(sys.argv[-2]),int(sys.argv[-1]))
 if __name__=='__main__' and 'context' in sys.argv:context()
 if __name__=='__main__' and 'publish' in sys.argv:publish()
