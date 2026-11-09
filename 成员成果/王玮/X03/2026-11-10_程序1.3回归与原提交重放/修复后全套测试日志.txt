@@ -1,0 +1,47 @@
+test_annual_total (test_check_data.Checks.test_annual_total) ... ok
+test_deposit_cannot_be_rent (test_check_data.Checks.test_deposit_cannot_be_rent) ... ok
+test_direct_unit_without_area (test_check_data.Checks.test_direct_unit_without_area) ... ok
+test_disclosed_rent_and_adjusted_rent_types (test_check_data.Checks.test_disclosed_rent_and_adjusted_rent_types) ... ok
+test_duplicate_observations (test_check_data.Checks.test_duplicate_observations) ... ok
+test_filled_reviews_protected (test_check_data.Checks.test_filled_reviews_protected) ... ok
+test_missing_column_is_file_error (test_check_data.Checks.test_missing_column_is_file_error) ... ok
+test_month_total (test_check_data.Checks.test_month_total) ... ok
+test_multiple_periods_preserved (test_check_data.Checks.test_multiple_periods_preserved) ... ok
+test_no_price_and_zero_building (test_check_data.Checks.test_no_price_and_zero_building) ... ok
+test_room_price_is_not_area_price (test_check_data.Checks.test_room_price_is_not_area_price) ... ok
+test_wrong_area (test_check_data.Checks.test_wrong_area) ... ok
+test_wrong_arithmetic (test_check_data.Checks.test_wrong_arithmetic) ... ok
+test_wrong_source_numerator (test_check_data.Checks.test_wrong_source_numerator) ... ok
+test_zero_denominator (test_check_data.Checks.test_zero_denominator) ... ok
+test_annual_total (test_real_expressions_v13.RealExpressions.test_annual_total) ... ok
+test_b01_unit_suffix (test_real_expressions_v13.RealExpressions.test_b01_unit_suffix) ... ok
+test_bare_monthly (test_real_expressions_v13.RealExpressions.test_bare_monthly) ... ok
+test_blank_stays_blank (test_real_expressions_v13.RealExpressions.test_blank_stays_blank) ... ok
+test_conflicting_prices_not_guessed (test_real_expressions_v13.RealExpressions.test_conflicting_prices_not_guessed) ... ok
+test_deposit_cannot_be_rent (test_real_expressions_v13.RealExpressions.test_deposit_cannot_be_rent) ... ok
+test_direct_unit_without_area (test_real_expressions_v13.RealExpressions.test_direct_unit_without_area) ... ok
+test_disclosed_rent_and_adjusted_rent_types (test_real_expressions_v13.RealExpressions.test_disclosed_rent_and_adjusted_rent_types) ... ok
+test_duplicate_observations (test_real_expressions_v13.RealExpressions.test_duplicate_observations) ... ok
+test_filled_reviews_protected (test_real_expressions_v13.RealExpressions.test_filled_reviews_protected) ... ok
+test_land_only_not_used (test_real_expressions_v13.RealExpressions.test_land_only_not_used) ... ok
+test_missing_column_is_file_error (test_real_expressions_v13.RealExpressions.test_missing_column_is_file_error) ... ok
+test_month_total (test_real_expressions_v13.RealExpressions.test_month_total) ... ok
+test_multiple_areas_not_guessed (test_real_expressions_v13.RealExpressions.test_multiple_areas_not_guessed) ... ok
+test_multiple_periods_preserved (test_real_expressions_v13.RealExpressions.test_multiple_periods_preserved) ... ok
+test_no_price_and_zero_building (test_real_expressions_v13.RealExpressions.test_no_price_and_zero_building) ... ok
+test_not_yet_signed_off (test_real_expressions_v13.RealExpressions.test_not_yet_signed_off) ... ok
+test_pending_classmate (test_real_expressions_v13.RealExpressions.test_pending_classmate) ... ok
+test_pending_named_reviewer (test_real_expressions_v13.RealExpressions.test_pending_named_reviewer) ... ok
+test_range_denominator_not_guessed (test_real_expressions_v13.RealExpressions.test_range_denominator_not_guessed) ... ok
+test_room_price_is_not_area_price (test_real_expressions_v13.RealExpressions.test_room_price_is_not_area_price) ... ok
+test_simple_wrong_amount (test_real_expressions_v13.RealExpressions.test_simple_wrong_amount) ... ok
+test_wan_year (test_real_expressions_v13.RealExpressions.test_wan_year) ... ok
+test_wrong_area (test_real_expressions_v13.RealExpressions.test_wrong_area) ... ok
+test_wrong_arithmetic (test_real_expressions_v13.RealExpressions.test_wrong_arithmetic) ... ok
+test_wrong_source_numerator (test_real_expressions_v13.RealExpressions.test_wrong_source_numerator) ... ok
+test_zero_denominator (test_real_expressions_v13.RealExpressions.test_zero_denominator) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 0.864s
+
+OK

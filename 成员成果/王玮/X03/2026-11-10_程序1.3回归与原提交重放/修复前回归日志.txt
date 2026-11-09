@@ -1,0 +1,95 @@
+test_annual_total (test_real_expressions_v13.RealExpressions.test_annual_total) ... ok
+test_b01_unit_suffix (test_real_expressions_v13.RealExpressions.test_b01_unit_suffix) ... FAIL
+test_bare_monthly (test_real_expressions_v13.RealExpressions.test_bare_monthly) ... FAIL
+test_blank_stays_blank (test_real_expressions_v13.RealExpressions.test_blank_stays_blank) ... ok
+test_conflicting_prices_not_guessed (test_real_expressions_v13.RealExpressions.test_conflicting_prices_not_guessed) ... ok
+test_deposit_cannot_be_rent (test_real_expressions_v13.RealExpressions.test_deposit_cannot_be_rent) ... ok
+test_direct_unit_without_area (test_real_expressions_v13.RealExpressions.test_direct_unit_without_area) ... ok
+test_disclosed_rent_and_adjusted_rent_types (test_real_expressions_v13.RealExpressions.test_disclosed_rent_and_adjusted_rent_types) ... ok
+test_duplicate_observations (test_real_expressions_v13.RealExpressions.test_duplicate_observations) ... ok
+test_filled_reviews_protected (test_real_expressions_v13.RealExpressions.test_filled_reviews_protected) ... ok
+test_land_only_not_used (test_real_expressions_v13.RealExpressions.test_land_only_not_used) ... ok
+test_missing_column_is_file_error (test_real_expressions_v13.RealExpressions.test_missing_column_is_file_error) ... ok
+test_month_total (test_real_expressions_v13.RealExpressions.test_month_total) ... ok
+test_multiple_areas_not_guessed (test_real_expressions_v13.RealExpressions.test_multiple_areas_not_guessed) ... ok
+test_multiple_periods_preserved (test_real_expressions_v13.RealExpressions.test_multiple_periods_preserved) ... ok
+test_no_price_and_zero_building (test_real_expressions_v13.RealExpressions.test_no_price_and_zero_building) ... ok
+test_not_yet_signed_off (test_real_expressions_v13.RealExpressions.test_not_yet_signed_off) ... FAIL
+test_pending_classmate (test_real_expressions_v13.RealExpressions.test_pending_classmate) ... FAIL
+test_pending_named_reviewer (test_real_expressions_v13.RealExpressions.test_pending_named_reviewer) ... FAIL
+test_range_denominator_not_guessed (test_real_expressions_v13.RealExpressions.test_range_denominator_not_guessed) ... ok
+test_room_price_is_not_area_price (test_real_expressions_v13.RealExpressions.test_room_price_is_not_area_price) ... ok
+test_simple_wrong_amount (test_real_expressions_v13.RealExpressions.test_simple_wrong_amount) ... FAIL
+test_wan_year (test_real_expressions_v13.RealExpressions.test_wan_year) ... FAIL
+test_wrong_area (test_real_expressions_v13.RealExpressions.test_wrong_area) ... ok
+test_wrong_arithmetic (test_real_expressions_v13.RealExpressions.test_wrong_arithmetic) ... ok
+test_wrong_source_numerator (test_real_expressions_v13.RealExpressions.test_wrong_source_numerator) ... ok
+test_zero_denominator (test_real_expressions_v13.RealExpressions.test_zero_denominator) ... ok
+
+======================================================================
+FAIL: test_b01_unit_suffix (test_real_expressions_v13.RealExpressions.test_b01_unit_suffix)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\喇磊老师任务\仓库\rongtong-js-rent-research\代码\数据质量检查\tests\test_real_expressions_v13.py", line 22, in test_b01_unit_suffix
+    r,issues=self.run_rows([self.simple(area_building_chargeable_land='公告租赁面积约210.90平方米；实际计租、建筑及土地面积未分别确认',monthly_normalized='142.9587元/平方米/月（公告范围名义分摊）')]);self.assertEqual(r['normalized_checked'],1);self.assertFalse(any(x['规则']=='U02' for x in issues))
+                                                                                                                                                                                                        ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_bare_monthly (test_real_expressions_v13.RealExpressions.test_bare_monthly)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\喇磊老师任务\仓库\rongtong-js-rent-research\代码\数据质量检查\tests\test_real_expressions_v13.py", line 19, in test_bare_monthly
+    r,issues=self.run_rows([self.simple()]);self.assertEqual(r['normalized_checked'],1);self.assertFalse(any(x['规则'] in ['U01','U02'] for x in issues))
+                                            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_not_yet_signed_off (test_real_expressions_v13.RealExpressions.test_not_yet_signed_off)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\喇磊老师任务\仓库\rongtong-js-rent-research\代码\数据质量检查\tests\test_real_expressions_v13.py", line 52, in test_not_yet_signed_off
+    _,i=self.run_rows([self.row(verification_status='尚未完成成员复核')]);self.assertTrue(any(x['规则']=='V01' for x in i))
+                                                                          ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_pending_classmate (test_real_expressions_v13.RealExpressions.test_pending_classmate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\喇磊老师任务\仓库\rongtong-js-rent-research\代码\数据质量检查\tests\test_real_expressions_v13.py", line 49, in test_pending_classmate
+    _,i=self.run_rows([self.row(verification_status='挂牌及成交原文已核，待同学复核')]);self.assertTrue(any(x['规则']=='V01' for x in i))
+                                                                                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_pending_named_reviewer (test_real_expressions_v13.RealExpressions.test_pending_named_reviewer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\喇磊老师任务\仓库\rongtong-js-rent-research\代码\数据质量检查\tests\test_real_expressions_v13.py", line 46, in test_pending_named_reviewer
+    _,i=self.run_rows([self.row(verification_status='原始来源已取得；待游依宸独立复核')]);self.assertTrue(any(x['规则']=='V01' for x in i))
+                                                                                          ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_simple_wrong_amount (test_real_expressions_v13.RealExpressions.test_simple_wrong_amount)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\喇磊老师任务\仓库\rongtong-js-rent-research\代码\数据质量检查\tests\test_real_expressions_v13.py", line 28, in test_simple_wrong_amount
+    _,i=self.run_rows([self.simple(monthly_normalized='143.96')]);self.assertTrue(any(x['规则']=='U01' for x in i))
+                                                                  ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_wan_year (test_real_expressions_v13.RealExpressions.test_wan_year)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\喇磊老师任务\仓库\rongtong-js-rent-research\代码\数据质量检查\tests\test_real_expressions_v13.py", line 25, in test_wan_year
+    r,issues=self.run_rows([self.simple(raw_price_unit='49.056 万元/年',area_building_chargeable_land='280㎡，公告租赁面积',monthly_normalized='146.00')]);self.assertEqual(r['normalized_checked'],1);self.assertFalse(any(x['规则'] in ['U01','U02'] for x in issues))
+                                                                                                                                                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 1
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.839s
+
+FAILED (failures=7)
