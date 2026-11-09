@@ -10,7 +10,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[2]
-VERSION = '1.0'
+VERSION = '1.1'
 NUM = r'[-+]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?'
 RULES = [
  ('S01','错误','表结构','缺少模板字段、重复表头或行列错位'),
@@ -58,6 +58,13 @@ def check(input_path, template_path, out):
     outputs = ['逐条质检结果.csv','问题明细.csv','人工复核清单.csv','质检规则.csv','质检摘要.md']
     if any(out / name in (input_path, template_path) for name in outputs):
         raise ValueError('输出位置与输入文件冲突')
+    review_path = out / '人工复核清单.csv'
+    if review_path.exists():
+        with review_path.open(encoding='utf-8-sig', newline='') as handle:
+            review_fields = ['原件值', '核对结论', '修正建议', '复核人', '复核日期']
+            if any(any((row.get(key) or '').strip() for key in review_fields)
+                   for row in csv.DictReader(handle)):
+                raise ValueError('人工复核清单已有填写内容，为保留复核记录，请用 --out 指定新的结果目录')
     original_hash = hashlib.sha256(input_path.read_bytes()).hexdigest()
     with template_path.open(encoding='utf-8-sig', newline='') as handle:
         expected = next(csv.reader(handle))

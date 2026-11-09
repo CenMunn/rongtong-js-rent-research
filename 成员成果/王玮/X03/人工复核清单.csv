@@ -5,7 +5,13 @@ D:\喇磊老师任务\outputs\群内提交\四片区基本情况表补采\01_项
 HTML存档=D:\喇磊老师任务\outputs\公众号片区采集\4167416190114906129\原文存档\43243bd58892dc20f59bbd68fd730ecc67988f370fa161f3e2ec4f7f3b47d2f8.html
 正文图序=60
 图内行序=1
-标题=南京片区项目招租合集|融通地产江苏公司优质资产火热招租",,,,,
+标题=南京片区项目招租合集|融通地产江苏公司优质资产火热招租","address_scope_floor：江苏省南京市玄武区北京东路44号-2；与太平门街81号负一层捆绑招租
+raw_price_unit：分项272.95万元/年=2729500元/年；整包284.38万元/年=2843800元/年
+area_building_chargeable_land：分项建筑6231.77㎡；土地1948.13㎡；另一项建筑331㎡；整包建筑6562.77㎡
+tax_fee：招租底价及最终竞得价不含税；缴纳租金含税，税点5%",已完成所列字段的Codex辅助原图/存档核对；待本人或组员确认。详见Y01字段复核记录，其他字段仍待核。,"address_scope_floor：补门牌-2；标为捆绑包分项，资产ID交席风翔统一核对
+raw_price_unit：保留原OCR；另记识别确认值及分项标签，不用整包价覆盖分项价
+area_building_chargeable_land：分项、另一项和合计行分别保留，分析时不得把合计与分项同时累加
+tax_fee：逐公告记录税点，不能沿用其他项目的9%",Codex辅助；责任人王玮，待本人或组员确认,2026-11-09
 87,WX-20261108-000087,RT-P-43341356c69db14899,优先,明示年价、非正金额或数值内空格需回原件核对；原核验状态缺失或仍有待核事项；此规则不判断具体字段是否已核,"https://mp.weixin.qq.com/s?__biz=MzAwNTY4Njc4Mg==&mid=2247528126&idx=1&sn=38762fac8a80d2f6bff17722fc43b94a&chksm=9b1afa2fac6d7339fc17902e48a433bf301754047fc123326c6d585d798ecac52fd7f61e659b#rd
 https://mmbiz.qpic.cn/mmbiz_png/o9rLUh6nic9Wh7icKQQibJiboSYyga3fGbP90h4KEygESEcADERHdfE7IxIZOrpkwB70XFgu0qicrd0h1sdQo7PaRXQ/640?wx_fmt=png&from=appmsg
 D:\喇磊老师任务\outputs\群内提交\四片区基本情况表补采\01_项目表格行.csv:数据行88
@@ -19,7 +25,11 @@ D:\喇磊老师任务\outputs\群内提交\四片区基本情况表补采\01_项
 HTML存档=D:\喇磊老师任务\outputs\公众号片区采集\4167416190114906129\原文存档\96df4d8173610902a3de032a6accc9ce27ae7fa7a607944ea0414b43128b21e8.html
 正文图序=5
 图内行序=1
-标题=南京市大行宫旁优质酒店资产火热招商，即将报名截止丨融通地产江苏公司",,,,,
+标题=南京市大行宫旁优质酒店资产火热招商，即将报名截止丨融通地产江苏公司","area_building_chargeable_land：建筑5976.03㎡；土地0㎡；正文亦为5976.03㎡
+raw_price_unit：图表4406127元/年；正文440.61万（不含税）=4406100元，正文为约数
+rent_free_escalation：5年；免租3个月置于首个租赁年末；半年付；每年递增2%；税9%",已完成所列字段的Codex辅助原图/存档核对；待本人或组员确认。详见Y01字段复核记录，其他字段仍待核。,"area_building_chargeable_land：建议将建筑面积5976.0修订为5976.03，保留原OCR；补录土地明确0
+raw_price_unit：并列保留两种表达及精度；计算候选采用图表4406127元/年并待官方文件复核
+rent_free_escalation：第11层及以下已有租户，清退装修费用由竞得人负责；租赁范围仍待正式招租文件核实",Codex辅助；责任人王玮，待本人或组员确认,2026-11-09
 131,WX-20261108-000131,RT-P-2a899776e04ab710e2,优先,明示年价、非正金额或数值内空格需回原件核对；原核验状态缺失或仍有待核事项；此规则不判断具体字段是否已核,"https://mp.weixin.qq.com/s?__biz=MzAwNTY4Njc4Mg==&mid=2247522731&idx=1&sn=218a4dc6dfd283c2265393c5403ad119&chksm=9b1a0d3aac6d842c663d555a937c9e36f8433047a1d31f8bfcf9c30a0f23d859f6fc4f7e5d6c#rd
 https://mmbiz.qpic.cn/mmbiz_png/o9rLUh6nic9ULpmHl3oMm7fVoBwJ1Qm3ntSyemqDFn060bn4QFIvOlkiayLKqMyWibO6xPcXyeErOLTUmWqGxMX5w/640?wx_fmt=png&from=appmsg
 D:\喇磊老师任务\outputs\群内提交\四片区基本情况表补采\01_项目表格行.csv:数据行132
@@ -520,7 +530,13 @@ HTML存档=D:\喇磊老师任务\outputs\公众号片区采集\41674161901149061
 标题=江苏省南京市3处资产招租丨融通地产江苏公司优质资产火热招租
 官方核验链接=https://www.ronghw.cn/lease/package/968e51d2329c4355a556b3301f3437bf
 官方资产包编号=RTDC-ZLZCB-20260600553
-官方原文留档=D:\喇磊老师任务\outputs\公众号补缺核验\官方原文\5da3550e536b9dc992739efa.html.gz",,,,,
+官方原文留档=D:\喇磊老师任务\outputs\公众号补缺核验\官方原文\5da3550e536b9dc992739efa.html.gz","area_building_chargeable_land：建筑560㎡；土地1255㎡
+raw_price_unit：7.21万元/年=72100元/年；竞价保证金1.80万元
+monthly_normalized：72100÷12÷560=10.729167元/建筑㎡/月
+rent_free_escalation：1年；无免租；年付；原租户优先；可提前1个月通知终止并按实际结算",已完成所列字段的Codex辅助原图/存档核对；待本人或组员确认。详见Y01字段复核记录，其他字段仍待核。,"area_building_chargeable_land：尚未确认计租面积；建筑与场地均有出租范围时，不将建筑单价视为纯房屋市场价
+raw_price_unit：保留底价性质；保证金不进入租金分子
+monthly_normalized：仅为名义建筑月单价，计租范围与场地贡献仍待核
+rent_free_escalation：条款须与金额一起保留，实际成交、完整合同和履行状态尚未核实",Codex辅助；责任人王玮，待本人或组员确认,2026-11-09
 2,WX-20261108-000002,RT-P-5d09136deac8d4b8a6,常规,原核验状态缺失或仍有待核事项；此规则不判断具体字段是否已核,"https://mp.weixin.qq.com/s?__biz=MzAwNTY4Njc4Mg==&mid=2247540084&idx=2&sn=ec761b67b0360095d024962a634e5f62&chksm=9b1ac9e5ac6d40f399636c6eee2244a9c95a30eb0ce07a3edef55b93192e5f825ec0bb086d85#rd
 https://mmbiz.qpic.cn/mmbiz_png/ibXUcGK5QOKRyDticJM0lDH0ZV0GnVKt3EPmjgibJHicKkZVWsHUDjh1uhAy52FKyyoSwH75pEPHBbicB01cDJB2WXqt0gucOQ1wnzQPyzl2viaa8/640?wx_fmt=png&from=appmsg
 D:\喇磊老师任务\outputs\群内提交\四片区基本情况表补采\01_项目表格行.csv:数据行3
@@ -4389,7 +4405,13 @@ D:\喇磊老师任务\outputs\公众号片区采集\4167437118936891402\项目�
 HTML存档=D:\喇磊老师任务\outputs\公众号片区采集\4167437118936891402\原文存档\72f3f03f8ebc0110a027a435806e2787bbe23235a6dfd9b023d9862dcb1d0586.html
 正文图序=9
 图内行序=1
-标题=招租公告｜融通地产江苏公司优质资产火热招租",,,,,
+标题=招租公告｜融通地产江苏公司优质资产火热招租","area_building_chargeable_land：建筑11181.97㎡；土地13279.31㎡
+raw_price_unit：113.34万元/年=1133400元/年；正文明确首年租金
+monthly_normalized：8.446633元/建筑㎡/月；公式1133400÷12÷11181.97
+rent_free_escalation：5年；每年1%；免租3月置于首个租赁年末、原租户无免租；年付；税9%",已完成所列字段的Codex辅助原图/存档核对；待本人或组员确认。详见Y01字段复核记录，其他字段仍待核。,"area_building_chargeable_land：建筑11181.9→11181.97；土地13279.3→13279.31，保留OCR原值
+raw_price_unit：价格性质为首年招租底价，非成交价
+monthly_normalized：经确认修订面积后同步重算单价；算术检查通过不代表原始数字正确
+rent_free_escalation：首年名义单价与有效租金需分开",Codex辅助；责任人王玮，待本人或组员确认,2026-11-09
 393,WX-20261108-000393,RT-P-704d376e6e42bbff9f,常规,原核验状态缺失或仍有待核事项；此规则不判断具体字段是否已核,"https://mp.weixin.qq.com/s?__biz=MzAwNTY4Njc4Mg==&mid=2247536716&idx=2&sn=87e8d349f4da9e253029631d829cdafa&chksm=9b1ac4ddac6d4dcbcc88cd536382d945284c48ea2582f73ffe203c35bbb4139a25756471f8da#rd
 https://mmbiz.qpic.cn/mmbiz_png/ibXUcGK5QOKQgQFOcvuianphRuD5eZVGCZqibZqenDBeqpuA8wJt8YnCujpSYPsdW1tXicFDUSkicsKe0mWFNOvsrOeS5URialtibPOEZiaVjn126WU/640?wx_fmt=png&from=appmsg
 D:\喇磊老师任务\outputs\群内提交\四片区基本情况表补采\01_项目表格行.csv:数据行394
@@ -5501,7 +5523,11 @@ D:\喇磊老师任务\outputs\公众号片区采集\4167473103481520130\项目�
 HTML存档=D:\喇磊老师任务\outputs\公众号片区采集\4167473103481520130\原文存档\156b9fe846954bc7d64fe7f52780f224c2dab5c755c46c01d619eefb2e6655ee.html
 正文图序=2
 图内行序=1
-标题=融通地产｜苏州片区13处优质资产重磅招租，黄金区位、业态多元",,,,,
+标题=融通地产｜苏州片区13处优质资产重磅招租，黄金区位、业态多元","area_building_chargeable_land：建筑20988.65㎡；土地69170.28㎡；原图及正文一致
+raw_price_unit：摘要表与对应项目正文均未披露租金
+building_condition：招租业态商业、办公及配套；承租户自行加固并取得备案合格报告，费用及安全责任自担",已完成所列字段的Codex辅助原图/存档核对；待本人或组员确认。详见Y01字段复核记录，其他字段仍待核。,"area_building_chargeable_land：土地68170.28→69170.28；保留原值与正文对照依据
+raw_price_unit：金额与月单价继续留空；后续跟进项目招租文件，不以0代替缺失
+building_condition：补入条件卡线索；未补到价格前不作为租金标签",Codex辅助；责任人王玮，待本人或组员确认,2026-11-09
 511,WX-20261108-000511,RT-P-c687ca56adacef88bb,常规,原核验状态缺失或仍有待核事项；此规则不判断具体字段是否已核,"https://mp.weixin.qq.com/s?__biz=MzAwNTY4Njc4Mg==&mid=2247541590&idx=3&sn=2b800a319cee3dbd5f3200a3ea198b86&chksm=9b1ab7c7ac6d3ed106ec7fbee6adb86b272fd9d004534ca2c790bc598497c0f4ddb40e91d102#rd
 https://mmbiz.qpic.cn/mmbiz_png/ibXUcGK5QOKT4Ht9q4Q66yh5TS8K3tagS5ZHOHFu1eibJkhj1RjZjlI7LvfgRukDUOU3DUFdIOibSv6nbNa6qSzhta1Mia5Z54hJ2WbXUicvZMcE/640?wx_fmt=png&from=appmsg
 D:\喇磊老师任务\outputs\群内提交\四片区基本情况表补采\01_项目表格行.csv:数据行512
@@ -7013,7 +7039,11 @@ D:\喇磊老师任务\outputs\公众号片区采集\4167485713270620161\项目�
 HTML存档=D:\喇磊老师任务\outputs\公众号片区采集\4167485713270620161\原文存档\7fb3c3adae14100c727f3103fd788b9cc7f9d11c0024b89ea9dd0cbcc65f1348.html
 正文图序=9
 图内行序=1
-标题=安徽省合肥市巢湖市军分区路1号项目招租公告 丨融通地产江苏公司优质资产火热招租",,,,,
+标题=安徽省合肥市巢湖市军分区路1号项目招租公告 丨融通地产江苏公司优质资产火热招租","area_building_chargeable_land：建筑4378.5㎡；土地1324㎡，正文与原图一致
+raw_price_unit：图表91.545291万元/年=915452.91元/年；正文首年915452.91元
+rent_free_escalation：5年；无免租；每年1%；半年付；税点5%",已完成所列字段的Codex辅助原图/存档核对；待本人或组员确认。详见Y01字段复核记录，其他字段仍待核。,"area_building_chargeable_land：原图另注出租面积含88.5㎡消防房、范围不含院内停车场，纳入条件说明
+raw_price_unit：竞价保证金图表24.03万元、正文240306元为精度差，分别保留，不混入租金
+rent_free_escalation：属于江苏公司发布的安徽项目；单列安徽样本，不并入江苏省租金市场统计",Codex辅助；责任人王玮，待本人或组员确认,2026-11-09
 684,WX-20261108-000684,RT-P-ca90f6703377c5d81a,常规,原核验状态缺失或仍有待核事项；此规则不判断具体字段是否已核,"https://mp.weixin.qq.com/s?__biz=MzAwNTY4Njc4Mg==&mid=2247536858&idx=2&sn=e78fe7ec07ba1346397dd781a2041ee1&chksm=9b1ac44bac6d4d5ddfd9ed2c19c2cd60aa562cd609b597b09b5e0ee8e1dec30d320f0a2ce561#rd
 https://mmbiz.qpic.cn/mmbiz_png/ibXUcGK5QOKQWNuhN9natmNweBUz6U6CLJQh4zJRGWVmcIzoLicib90LqniaEQDzW2ibib49pPp5fSnDlyk2Yg9NsiaIrtFIRCd53IJJF4yntJqfibQ/640?wx_fmt=png&from=appmsg
 D:\喇磊老师任务\outputs\群内提交\四片区基本情况表补采\01_项目表格行.csv:数据行685
