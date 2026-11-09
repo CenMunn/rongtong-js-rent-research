@@ -1,0 +1,3 @@
+﻿记录序号,observation_id,asset_id,规则,级别,字段,问题,原值摘要,来源
+4,CYF-B01-CJ-N0117FCZZ231107,TMP-CYF-B01-N0117FCZZ231107,U03,提示,monthly_normalized,未填名义月单价，保留年价或其他原始口径,,https://www.ejy365.com/info/ejy106769 | https://jsggzy.jszwfw.gov.cn/jyxx/003006/003006004/20231130/N0117FCZZ231107.html | 证据/NJ_hunan2023_listing.html；证据/NJ_hunan2023_result.html
+4,CYF-B01-CJ-N0117FCZZ231107,TMP-CYF-B01-N0117FCZZ231107,V01,需复核,verification_status,原核验状态缺失或仍有待核事项；此规则不判断具体字段是否已核,原始来源已取得并完成本次配对；待游依宸独立复核；计租分母待核,https://www.ejy365.com/info/ejy106769 | https://jsggzy.jszwfw.gov.cn/jyxx/003006/003006004/20231130/N0117FCZZ231107.html | 证据/NJ_hunan2023_listing.html；证据/NJ_hunan2023_result.html

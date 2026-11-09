@@ -1,0 +1,17 @@
+﻿规则,默认级别,字段,检查范围
+S01,错误,表结构,缺少模板字段、重复表头或行列错位
+S02,提示,表结构,多出字段保留并提示
+I01,错误,asset_id / observation_id,资产ID或观察ID为空
+I02,错误,observation_id,观察ID重复；资产ID重复允许多期观察
+P01,需复核,price_type,缺少或无法识别价格性质
+P02,需复核,raw_price_unit,报价缺原价单位，或无价记录却有计算单价
+P03,需复核,raw_price_unit,明示年价相互冲突、数值格式存疑或金额非正
+A01,需复核,address_scope_floor / area_building_chargeable_land,地址或面积信息空白；负面积待核，零建筑面积保留
+U01,错误,monthly_normalized,明示公式的面积分母非正或单价与公式/原文直录值不符
+U02,需复核,monthly_normalized,无法解析单价、源价格/单位不匹配或公式面积不一致
+U03,提示,monthly_normalized,当前有价记录未填单价，待满足面积及单位条件再算
+D01,需复核,collection_date / publish_sign_start_end_dates,采集日期缺失、无法识别或明示日期不存在
+L01,错误,source_url_page,未填写来源
+L02,需复核,source_url_page,仅本地存档或未发现HTTP(S)网址，需核共享位置及出处；不检测网络可达性
+V01,需复核,verification_status,缺核验状态或原状态仍含待核／需复核等事项
+R01,需复核,missing_reason,关键字段缺失但没有缺失原因
