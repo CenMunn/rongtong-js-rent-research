@@ -1,0 +1,25 @@
+{
+  "输入": {
+    "成员成果/王玮/Y01/公众号整理版_v2/公众号采集结果_整理版_v2.csv": "562b4fb084dcc6191ff93b7863eec57e919f954c593aef6461929e2a3fc285bd",
+    "共享资料/公众号采集结果.csv": "15af352277259e67fbd12f7418cb341a9b218ae672e038d6a726bfeab109e8d7",
+    "成员成果/王玮/Y01/Y01_证据索引.csv": "b58aa4f1dcfd5f71f4aa083ca4876bab95d7b2addd4cf08eee404955e57dee6e",
+    "成员成果/王玮/Y01/Y01_字段复核记录.csv": "72a6b0c9c2b3bd8b469febf955441bf51f12accb6d05098a2f283f61d4e4e944",
+    "成员成果/王玮/Y01/第二批10条复核/成员签核登记.csv": "a7a551ca2800e9ed1765df5ca4ac4fe768f3896e73f21ff125d83b8bf70c2ffb",
+    "成员成果/王玮/Y01/第三批10条复核/第三批复核记录.csv": "78d03430169067de54d63fa8cb6131746afba82bec075f85e57f35e1e53f923f",
+    "成员成果/王玮/Y01/第四批10条待核候选/第四批10条待核候选.csv": "6ee3fce63a15ed44d2e0a3863602d28d32d4e8b0a56abde04f4ec3f768728a10",
+    "成员成果/王玮/Y01/公众号整理版_v2/未定差异清单.csv": "9db202ddbd1dc8b0638ab8e2f82e2cec1fd70fc7f3c7f3cb7adcc525a607c211"
+  },
+  "输出": {
+    "两项未定差异.csv": "9db202ddbd1dc8b0638ab8e2f82e2cec1fd70fc7f3c7f3cb7adcc525a607c211",
+    "分层与状态说明.md": "0d1901ecfe724d5cc54bf94aaeb16412a959f84883cc54770108de013bc0fb15",
+    "归属待确认_28字段.csv": "c2b13d018e801d33841e1c8ed9291e111dbb538f26b7d15ab9a0f4c37667106c",
+    "归属待确认原因清单.csv": "5d830ec0f0308255eab0cec7c93a712430b5bb3de9a43c0310727ded02914af8",
+    "汇总与校验.json": "ab5ed71c677669ce7ea0732c832334d40579895fc3e47d10cde8f935725a364b",
+    "江苏省内_28字段.csv": "4f18e2184d1c709a11a75f0c0d928999023c593092c2f0c8ba6edf3b3498a7f2",
+    "省域与状态交叉汇总.csv": "1fdb8738114e8e7c125529e666ddc89acd7f02ef0e87055cceb1c45e50ea8fff",
+    "省外保留_28字段.csv": "25fdcb4de0018a1f08a2cd2316abd10704f162f8d283b45a2f03c1ee3191272f",
+    "逐条省域与核验状态索引.csv": "970b6decf49c78b9769d35b900517b763fa6896ac36a64e87fa17fa7053c3112"
+  },
+  "生成程序": "代码/公众号数据整理/build_y01_layers.py",
+  "程序SHA256": "86198b5c2e41e5bb26e6e632bf52762b71a517eedf786cf790dc059892400b32"
+}

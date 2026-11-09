@@ -1,0 +1,68 @@
+运行：python -m unittest discover -s "代码/公众号数据整理/tests" -v
+test_amount_discrepancy_is_not_silently_chosen (test_build_reviewed.ReviewedCopy.test_amount_discrepancy_is_not_silently_chosen) ... ok
+test_every_changed_cell_has_before_after_evidence (test_build_reviewed.ReviewedCopy.test_every_changed_cell_has_before_after_evidence) ... ok
+test_land_conflict_has_no_adopted_value (test_build_reviewed.ReviewedCopy.test_land_conflict_has_no_adopted_value) ... ok
+test_only_four_observations_changed (test_build_reviewed.ReviewedCopy.test_only_four_observations_changed) ... ok
+test_source_unchanged_and_version_not_overwritten (test_build_reviewed.ReviewedCopy.test_source_unchanged_and_version_not_overwritten) ... ok
+test_structure_and_ids_preserved (test_build_reviewed.ReviewedCopy.test_structure_and_ids_preserved) ... ok
+test_supported_corrections (test_build_reviewed.ReviewedCopy.test_supported_corrections) ... ok
+test_cumulative_log_replays_from_raw (test_build_reviewed_v2.ReviewedV2.test_cumulative_log_replays_from_raw) ... ok
+test_log_matches_every_changed_field (test_build_reviewed_v2.ReviewedV2.test_log_matches_every_changed_field) ... ok
+test_only_signed_ten_observations_changed (test_build_reviewed_v2.ReviewedV2.test_only_signed_ten_observations_changed) ... ok
+test_reproduction_matches_published_values (test_build_reviewed_v2.ReviewedV2.test_reproduction_matches_published_values) ... ok
+test_signoff_scope_does_not_expand (test_build_reviewed_v2.ReviewedV2.test_signoff_scope_does_not_expand) ... ok
+test_source_hashes_unchanged_and_overwrite_rejected (test_build_reviewed_v2.ReviewedV2.test_source_hashes_unchanged_and_overwrite_rejected) ... ok
+test_two_disputes_and_history_retained (test_build_reviewed_v2.ReviewedV2.test_two_disputes_and_history_retained) ... ok
+test_city_and_county_city (test_y01_layers.LayerTests.test_city_and_county_city) ... ok
+test_conflicting_provinces_stay_pending (test_y01_layers.LayerTests.test_conflicting_provinces_stay_pending) ... ok
+test_explicit_province_and_broken_lines (test_y01_layers.LayerTests.test_explicit_province_and_broken_lines) ... ok
+test_full_partition_preserves_values_and_status_scope (test_y01_layers.LayerTests.test_full_partition_preserves_values_and_status_scope) ... ok
+test_region_only_is_not_address (test_y01_layers.LayerTests.test_region_only_is_not_address) ... ok
+test_road_and_site_names_are_not_provinces (test_y01_layers.LayerTests.test_road_and_site_names_are_not_provinces) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 1.774s
+
+OK
+
+
+运行：python -m unittest discover -s "代码/公众号数据爬虫/tests" -v
+test_decimal_tail (test_wechat_cells.NumericCells.test_decimal_tail) ... ok
+test_integer_tail (test_wechat_cells.NumericCells.test_integer_tail) ... ok
+test_no_cross_cell_digit (test_wechat_cells.NumericCells.test_no_cross_cell_digit) ... ok
+test_periods (test_wechat_cells.NumericCells.test_periods) ... ok
+test_range (test_wechat_cells.NumericCells.test_range) ... ok
+test_reflow_cannot_rewrite_prefix (test_wechat_cells.NumericCells.test_reflow_cannot_rewrite_prefix) ... ok
+test_reflow_low_confidence_not_accepted (test_wechat_cells.NumericCells.test_reflow_low_confidence_not_accepted) ... ok
+test_reflow_suffix (test_wechat_cells.NumericCells.test_reflow_suffix) ... ok
+test_small_tail_digit_with_internal_gap (test_wechat_cells.NumericCells.test_small_tail_digit_with_internal_gap) ... ok
+test_two_decimals (test_wechat_cells.NumericCells.test_two_decimals) ... ok
+test_uncovered_digit_in_nonempty_cell (test_wechat_cells.NumericCells.test_uncovered_digit_in_nonempty_cell) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.023s
+
+OK
+
+
+运行：python -m unittest discover -s "代码/数据质量检查/tests" -v
+test_annual_total (test_check_data.Checks.test_annual_total) ... ok
+test_deposit_cannot_be_rent (test_check_data.Checks.test_deposit_cannot_be_rent) ... ok
+test_direct_unit_without_area (test_check_data.Checks.test_direct_unit_without_area) ... ok
+test_disclosed_rent_and_adjusted_rent_types (test_check_data.Checks.test_disclosed_rent_and_adjusted_rent_types) ... ok
+test_duplicate_observations (test_check_data.Checks.test_duplicate_observations) ... ok
+test_filled_reviews_protected (test_check_data.Checks.test_filled_reviews_protected) ... ok
+test_missing_column_is_file_error (test_check_data.Checks.test_missing_column_is_file_error) ... ok
+test_month_total (test_check_data.Checks.test_month_total) ... ok
+test_multiple_periods_preserved (test_check_data.Checks.test_multiple_periods_preserved) ... ok
+test_no_price_and_zero_building (test_check_data.Checks.test_no_price_and_zero_building) ... ok
+test_room_price_is_not_area_price (test_check_data.Checks.test_room_price_is_not_area_price) ... ok
+test_wrong_area (test_check_data.Checks.test_wrong_area) ... ok
+test_wrong_arithmetic (test_check_data.Checks.test_wrong_arithmetic) ... ok
+test_wrong_source_numerator (test_check_data.Checks.test_wrong_source_numerator) ... ok
+test_zero_denominator (test_check_data.Checks.test_zero_denominator) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.330s
+
+OK
