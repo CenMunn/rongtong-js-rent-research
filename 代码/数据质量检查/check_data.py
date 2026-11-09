@@ -10,7 +10,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[2]
-VERSION = '1.1'
+VERSION = '1.2'
 NUM = r'[-+]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?'
 RULES = [
  ('S01','错误','表结构','缺少模板字段、重复表头或行列错位'),
@@ -21,8 +21,8 @@ RULES = [
  ('P02','需复核','raw_price_unit','报价缺原价单位，或无价记录却有计算单价'),
  ('P03','需复核','raw_price_unit','明示年价相互冲突、数值格式存疑或金额非正'),
  ('A01','需复核','address_scope_floor / area_building_chargeable_land','地址或面积信息空白；负面积待核，零建筑面积保留'),
- ('U01','错误','monthly_normalized','明示公式的面积分母非正或单价与公式不符'),
- ('U02','需复核','monthly_normalized','无法解析单价公式或公式与原价、面积不一致'),
+ ('U01','错误','monthly_normalized','明示公式的面积分母非正或单价与公式/原文直录值不符'),
+ ('U02','需复核','monthly_normalized','无法解析单价、源价格/单位不匹配或公式面积不一致'),
  ('U03','提示','monthly_normalized','当前有价记录未填单价，待满足面积及单位条件再算'),
  ('D01','需复核','collection_date / publish_sign_start_end_dates','采集日期缺失、无法识别或明示日期不存在'),
  ('L01','错误','source_url_page','未填写来源'),
@@ -52,6 +52,55 @@ def annual_prices(text):
             value = decimal(match[1])
             values.add(value * (10000 if match[2] == '万元' else 1))
     return values
+
+def price_values(text):
+    """识别年总租、月总租和直接平方米月价；保证金行不作为租金。"""
+    values = {'年': set(), '月': set(), '㎡/月': set()}
+    canonical = text.replace('平方米', '㎡').replace('m²', '㎡').replace('㎡月', '㎡/月').replace('·', '/')
+    for line in canonical.splitlines():
+        if '保证金' in line or re.search(r'\d\.\s+\d', line):
+            continue
+        for match in re.finditer(r'(?<![\d.,])(' + NUM + r')\s*(万元|元)\s*/\s*(㎡/月|首年|年|月)(?![\w/])', line):
+            values['年' if match[3]=='首年' else match[3]].add(decimal(match[1])*(10000 if match[2]=='万元' else 1))
+    return values
+
+def check_normalized(unit, raw, area, flag):
+    """返回已执行算术/直录检查的条数；源值和计租范围仍由原件确认。"""
+    source = price_values(raw)
+    display = re.match(r'^(' + NUM + r')\s*元/(建筑|计租|披露)?㎡/月', unit)
+    annual = list(re.finditer(r'公式\s*[=：]\s*(' + NUM + r')\s*元/年\s*[÷/]\s*12\s*[÷/]\s*(' + NUM + r')\s*㎡', unit))
+    monthly = list(re.finditer(r'公式\s*[=：]\s*(' + NUM + r')\s*元/月\s*[÷/]\s*(' + NUM + r')\s*㎡', unit))
+    direct = list(re.finditer(r'原文直录\s*[=：]\s*(' + NUM + r')\s*元/㎡/月', unit))
+    if not display or len(annual)+len(monthly)+len(direct)!=1:
+        flag('U02','需复核','仅校验年总租÷12÷面积、月总租÷面积或原文直录的平方米月价；其他表达待核')
+        return 0
+    observed = decimal(display[1])
+    tolerance = max(Decimal('0.000001'), Decimal(1).scaleb(observed.as_tuple().exponent)/2)
+    if direct:
+        value = decimal(direct[0][1])
+        if value not in source['㎡/月']:
+            flag('U02','需复核','原文直录值未与原价字段中的平方米月价对应；间/月等单位不得转成平方米月价')
+        if abs(observed-value)>tolerance:
+            flag('U01','错误','显示单价与明示原文直录值不一致')
+        return 1
+    match, period = (annual[0], '年') if annual else (monthly[0], '月')
+    numerator, denominator = decimal(match[1]), decimal(match[2])
+    equivalent = source[period] | ({x*12 for x in source['月']} if period=='年' else {x/12 for x in source['年']})
+    if numerator not in equivalent:
+        flag('U02','需复核','公式金额未与原价字段的金额及年/月单位对应，或原价仅为保证金/其他单位')
+    label = display[2]
+    labels = {'建筑': '建筑或房屋面积|建筑面积|房屋面积', '计租': '计租面积',
+              '披露': '披露面积', None: '建筑或房屋面积|建筑面积|房屋面积|计租面积|披露面积'}[label]
+    areas = [decimal(m[1]) for m in re.finditer(r'(?:'+labels+r')\s*[=：:]\s*('+NUM+r')\s*(?:㎡|平方米)',area)]
+    if denominator not in areas:
+        flag('U02','需复核','公式面积未与指定建筑/计租/披露面积对应，需核分母口径')
+    if denominator<=0:
+        flag('U01','错误','明示公式的面积分母非正')
+        return 0
+    expected = numerator/(12 if period=='年' else 1)/denominator
+    if abs(observed-expected)>tolerance:
+        flag('U01','错误','单价与明示公式不一致，按显示精度检查舍入')
+    return 1
 
 def check(input_path, template_path, out):
     input_path, template_path, out = input_path.resolve(), template_path.resolve(), out.resolve()
@@ -102,7 +151,7 @@ def check(input_path, template_path, out):
             issue(number,row,'I02','错误','observation_id','同一观察ID出现多次，需核对来源及观察范围')
         kind = get('price_type')
         no_price = bool(re.search('无明确价格|无价|面议|未披露价格', kind))
-        if not re.search('底价|起拍|挂牌|合同|成交|估值|市场指标|无明确价格|无价|面议|未披露价格', kind):
+        if not re.search('底价|起拍|挂牌|合同|成交|租赁价|调租价|估值|市场指标|无明确价格|无价|面议|未披露价格', kind):
             issue(number,row,'P01','需复核','price_type','需明确原价格性质')
         if kind and not no_price and not get('raw_price_unit'):
             issue(number,row,'P02','需复核','raw_price_unit','有价标签缺少原价与单位')
@@ -112,7 +161,8 @@ def check(input_path, template_path, out):
         if raw and not no_price and not re.search(NUM + r'\s*(万元|元)\s*(?:/|每)\s*(?:首年|年|月|日|天|㎡|平方米|m²|间)',raw):
             issue(number,row,'P02','需复核','raw_price_unit','当前规则未识别完整金额与单位组合，需核原表头')
         annual = annual_prices(raw)
-        if len(annual)>1 or any(value<=0 for value in annual) or re.search(r'\d\.\s+\d',raw):
+        all_prices = price_values(raw)
+        if any(len(v)>1 or any(x<=0 for x in v) for v in all_prices.values()) or re.search(r'\d\.\s+\d',raw):
             issue(number,row,'P03','需复核','raw_price_unit','明示年价、非正金额或数值内空格需回原件核对')
         for field in ['address_scope_floor','area_building_chargeable_land']:
             if not get(field):
@@ -122,25 +172,8 @@ def check(input_path, template_path, out):
             issue(number,row,'A01','需复核','area_building_chargeable_land','存在负面积，需核对是否识别错误')
         unit = get('monthly_normalized')
         if unit:
-            price = re.match(r'^(' + NUM + r')\s*元/(建筑|计租)?㎡/月',unit)
-            formulas = list(re.finditer(r'公式\s*[=：]\s*(' + NUM + r')\s*元/年\s*[÷/]\s*12\s*[÷/]\s*(' + NUM + r')\s*(㎡|平方米)',unit))
-            if not price or len(formulas)!=1:
-                issue(number,row,'U02','需复核','monthly_normalized','当前规则仅校验明示的年价÷12÷面积公式，其他格式待核')
-            else:
-                numerator, denominator = decimal(formulas[0][1]), decimal(formulas[0][2])
-                if denominator <= 0:
-                    issue(number,row,'U01','错误','monthly_normalized','明示公式的面积分母非正')
-                else:
-                    formula_checked += 1
-                    observed = decimal(price[1])
-                    tolerance = max(Decimal('0.000001'), Decimal(1).scaleb(observed.as_tuple().exponent) / 2)
-                    if abs(observed - numerator / 12 / denominator) > tolerance:
-                        issue(number,row,'U01','错误','monthly_normalized','单价与明示公式不一致，按显示精度检查舍入')
-                if annual and numerator not in annual:
-                    issue(number,row,'U02','需复核','monthly_normalized','公式年租金额未与原价字段中的明示年价对应')
-                area_values = [decimal(m[1]) for m in re.finditer(r'(?:建筑或房屋面积|建筑面积|房屋面积|计租面积)\s*[=：:]\s*(' + NUM + r')\s*(?:㎡|平方米)',area)]
-                if not area_values or denominator not in area_values:
-                    issue(number,row,'U02','需复核','monthly_normalized','公式面积未与明示建筑／计租面积对应，需核分母口径')
+            formula_checked += check_normalized(unit, raw, area, lambda code,severity,message:
+                issue(number,row,code,severity,'monthly_normalized',message))
         elif not no_price:
             issue(number,row,'U03','提示','monthly_normalized','未填名义月单价，保留年价或其他原始口径')
         try:
@@ -199,11 +232,14 @@ def check(input_path, template_path, out):
     write_csv(out/outputs[3],['规则','默认级别','字段','检查范围'],[dict(zip(['规则','默认级别','字段','检查范围'],r)) for r in RULES])
     counts=Counter(f['规则'] for f in findings)
     errors=sum(r['错误数']>0 for r in summary)
+    file_errors=sum(f['记录序号']==0 and f['级别']=='错误' for f in findings)
+    overall='存在文件结构错误' if file_errors else '存在记录错误' if errors else '所检规则无错误；待核事项另列'
     report=[f'# X03首批离线质检', '', f'规则版本 {VERSION}，运行时间 {datetime.now(timezone(timedelta(hours=8))).isoformat(timespec="seconds")}。',
             '',f'输入文件 {input_path.name}，SHA256为 `{original_hash}`。原始文件哈希在检查前后相同。',
             '',f'共检查{len(rows)}行、{len(fields)}个字段，模板为{len(expected)}个字段。',
+            f'文件结构错误{file_errors}项；总体状态：{overall}。',
             f'含错误的记录{errors}行，含需复核事项的记录{sum(r["需复核数"]>0 for r in summary)}行，人工队列{len(manual)}行。不同问题可能命中同一记录。',
-            f'明示年租÷12÷面积公式可解析且分母为正的记录{formula_checked}行，已按单价显示精度检查算术。',
+            f'可解析的年总租/月总租换算或直接单价记录{formula_checked}行，已按显示精度执行算术/直录检查；源金额、单位或面积不匹配另列U02。',
             f'具体规则问题列为优先的记录{sum(r["优先级"]=="优先" for r in manual)}行，其余仅原表核验状态提示的记录{sum(r["优先级"]=="常规" for r in manual)}行。',
             '',f'非空资产ID的不同取值有{len(set(r.get("asset_id", "") for r in rows)-{""})}个。这是当前候选ID的计数，资产范围仍待核实。',
             '', '本次检查表结构、明示文本、核验状态和可解析公式，网址仅检查格式。原文、图片和网络可达性需人工另核。检查结果不代表租金预测准确率或数据真实性评价。',
@@ -212,7 +248,7 @@ def check(input_path, template_path, out):
     report.extend(f'| {rule[0]} | {counts[rule[0]]} |' for rule in RULES)
     report.extend(['','未知字段及本规则无法识别的价格、面积、公式保留到复核队列。无价记录允许金额为空，零建筑面积允许保留，面积为零时不计算该面积口径的单价。'])
     (out/outputs[4]).write_text('\n'.join(report)+'\n','utf8')
-    return dict(rows=len(rows),error_rows=errors,review_rows=sum(r['需复核数']>0 for r in summary),rules=dict(counts))
+    return dict(rows=len(rows),file_errors=file_errors,error_rows=errors,review_rows=sum(r['需复核数']>0 for r in summary),normalized_checked=formula_checked,status=overall,rules=dict(counts))
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)

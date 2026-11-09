@@ -1,0 +1,6 @@
+﻿asset_id,observation_id,round_contract_id,lessor_entity,rongtong_relation,use_legal_actual,address_scope_floor,area_building_chargeable_land,price_type,raw_price_unit,publish_sign_start_end_dates,collection_date,related_party,tax_fee,rent_free_escalation,lease_incentive,monthly_normalized,effective_rent,coordinates_crs,accessibility,building_condition,industrial_specs,market_series_id,poi_time_license,source_url_page,verification_status,comparison_decision,missing_reason
+TMP-X03-O09,O09,,,与融通主体关系未独立核验；本表为外部来源观察，非融通自有底价表,,"胡桥村半栋标准厂房含办公
+城市=苏州相城","披露面积=1285.92㎡
+建筑/计租面积类型待核",招租底价,18元/㎡月,原披露日期或期间=2019-01-21公告；租期1年,2026-11-09T12:00:36+08:00,,原披露费用条件=未完整披露,,,18元/㎡/月；原文直录=18元/㎡/月,,,,,,,,"http://www.szxc.gov.cn/szxcrmzf/tzgg/201901/890803b706214b1ebf36679b50371d6a.shtml
+原抽核表观察ID=O09；CSV数据行=9","原抽核表已有来源及限制记录；本次为统一字段映射，主体、计租口径等仍待核
+原限制=官网年总价277759元，按单位价乘算277758.72元，属取整；无成交，不当2026价",外部历史招租底价单列，不作为成交价；非融通自有底价,原抽核表未完整披露出租主体、建筑/计租面积类型及租约经济条款；原始采集时间未提供，本次collection_date为整理录入时间；坐标和区位等后续再补

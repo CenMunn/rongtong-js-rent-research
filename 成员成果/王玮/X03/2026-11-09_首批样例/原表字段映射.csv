@@ -1,0 +1,12 @@
+﻿原字段,统一字段,处理方式
+观察ID,observation_id,原ID保留
+资产、城市,address_scope_floor / asset_id,地址原文保留；临时资产ID按同一范围分组
+价格性质,price_type,保留原文性质，不改成成交
+原价、原单位,raw_price_unit,拼接原价原单位，保留原表
+披露面积㎡,area_building_chargeable_land,标为披露面积，不冒充建筑或计租面积
+标准月单价、标准单位及口径,monthly_normalized,按原价重算并写公式；原表显示精度独立保留
+价格期间/日期,publish_sign_start_end_dates,保留原披露期间与缺失
+费用条件,tax_fee,原文照录，不推测税率
+核验及限制,verification_status / missing_reason / comparison_decision,保留原有限制，分字段判断用途
+原文URL、配对公告URL,source_url_page,保留原始URL并补原表ID、数据行及可得PDF页码
+本次整理时间,collection_date,注明为本次整理录入，原始抓取时间未提供

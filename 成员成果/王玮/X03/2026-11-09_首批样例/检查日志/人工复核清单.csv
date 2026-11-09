@@ -1,0 +1,27 @@
+﻿记录序号,observation_id,asset_id,优先级,待核事项,来源,原件值,核对结论,修正建议,复核人,复核日期
+6,O06,TMP-X03-O06,优先,字段为空，保留为待补记录；未识别到明示年月日，日期类型及原文待核；原核验状态缺失或仍有待核事项；此规则不判断具体字段是否已核,"https://reportdocs.static.szse.cn/UpFiles/rasinfodisc1/202503/RAS_202503_2719558E2A1F142CB6445BABA5F6C6128B9B11.pdf
+原抽核表观察ID=O06；CSV数据行=6
+PDF物理页728；仓库原件同S21汉桑法律意见书",,,,,
+1,O01,TMP-X03-O01,常规,原核验状态缺失或仍有待核事项；此规则不判断具体字段是否已核,"https://jsggzy.jszwfw.gov.cn/jyxx/003006/003006004/20260213/JSCQ_CJ_4785.html
+原抽核表观察ID=O01；CSV数据行=1
+同轮挂牌=https://jsggzy.jszwfw.gov.cn/jyxx/003006/003006001/20260126/JSCQ_XM_30334.html",,,,,
+2,O02,TMP-X03-O02,常规,原核验状态缺失或仍有待核事项；此规则不判断具体字段是否已核,"https://jsggzy.jszwfw.gov.cn/jyxx/003006/003006004/20261012/JSCQ_CJ_6793.html
+原抽核表观察ID=O02；CSV数据行=2
+同轮挂牌=https://jsggzy.jszwfw.gov.cn/jyxx/003006/003006001/20260814/JSCQ_XM_34455.html",,,,,
+3,O03,TMP-X03-O03,常规,原核验状态缺失或仍有待核事项；此规则不判断具体字段是否已核,"https://jsggzy.jszwfw.gov.cn/jyxx/003006/003006004/20241118/dac1cd95-faef-42b9-8d99-98a60d0d7658.html
+原抽核表观察ID=O03；CSV数据行=3
+同轮挂牌=https://jsggzy.jszwfw.gov.cn/jyxx/003006/003006001/20241025/5bb96c39-3275-437c-baf0-3638f356d68d.html",,,,,
+4,O04,TMP-X03-O04,常规,原核验状态缺失或仍有待核事项；此规则不判断具体字段是否已核,"https://reportdocs.static.szse.cn/UpFiles/rasinfodisc1/202503/RAS_202503_2719558E2A1F142CB6445BABA5F6C6128B9B11.pdf
+原抽核表观察ID=O04；CSV数据行=4
+PDF物理页203/680；关联关系见687；仓库原件=成员成果/游依宸/C02_汉桑禾盛/原件/S21_汉桑南京_IPO法律意见书.pdf",,,,,
+5,O05,TMP-X03-O04,常规,原核验状态缺失或仍有待核事项；此规则不判断具体字段是否已核,"https://reportdocs.static.szse.cn/UpFiles/rasinfodisc1/202503/RAS_202503_2719558E2A1F142CB6445BABA5F6C6128B9B11.pdf
+原抽核表观察ID=O05；CSV数据行=5
+PDF物理页203/680；关联关系见687；仓库原件=成员成果/游依宸/C02_汉桑禾盛/原件/S21_汉桑南京_IPO法律意见书.pdf",,,,,
+7,O07,TMP-X03-O07,常规,原核验状态缺失或仍有待核事项；此规则不判断具体字段是否已核,"https://epaper.stcn.com/att/202508/08/ZQ08B056-HF_eBook.pdf
+原抽核表观察ID=O07；CSV数据行=7
+2025-035公告；证券时报2025-08-08 B56；仓库原件=成员成果/游依宸/C02_汉桑禾盛/原件/S08_禾盛新材_2025-035公告报纸版.pdf",,,,,
+8,O08,TMP-X03-O07,常规,原核验状态缺失或仍有待核事项；此规则不判断具体字段是否已核,"https://epaper.stcn.com/att/202508/08/ZQ08B056-HF_eBook.pdf
+原抽核表观察ID=O08；CSV数据行=8
+2025-035公告；证券时报2025-08-08 B56；仓库原件=成员成果/游依宸/C02_汉桑禾盛/原件/S08_禾盛新材_2025-035公告报纸版.pdf",,,,,
+9,O09,TMP-X03-O09,常规,原核验状态缺失或仍有待核事项；此规则不判断具体字段是否已核,"http://www.szxc.gov.cn/szxcrmzf/tzgg/201901/890803b706214b1ebf36679b50371d6a.shtml
+原抽核表观察ID=O09；CSV数据行=9",,,,,
