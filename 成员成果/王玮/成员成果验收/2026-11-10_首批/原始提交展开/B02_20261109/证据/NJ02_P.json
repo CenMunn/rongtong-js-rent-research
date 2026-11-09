@@ -1,0 +1,627 @@
+{
+  "id": "NJ_zhongshan_listing",
+  "url": "https://www.ejy365.com/infodetail?infoid=N0117FCZZ250804-4",
+  "fetched_at": "2026-11-08T23:31:26.330872+08:00",
+  "method": "urllib HTTP GET",
+  "status": 200,
+  "final_url": "https://www.ejy365.com/info/ejy313972",
+  "content_type": "text/html;charset=UTF-8",
+  "sha256": "a2adbc7f5e3c0804f6c178bbf1b8bdee18b3f876a1c4bad4405087c374ed817c",
+  "bytes": 179410,
+  "saved_file": "证据/NJ_zhongshan_listing.html",
+  "text_file": "证据/NJ_zhongshan_listing.txt",
+  "links": [
+    {
+      "text": "登录",
+      "url": "https://ucenter.ejy365.com/login"
+    },
+    {
+      "text": "注册",
+      "url": "https://ucenter.ejy365.com/register"
+    },
+    {
+      "text": "证书登录",
+      "url": "https://www.ejy365.com/newlogin?loginType=key"
+    },
+    {
+      "text": "消息",
+      "url": "https://ucenter.ejy365.com/message"
+    },
+    {
+      "text": "会员中心",
+      "url": "https://ucenter.ejy365.com"
+    },
+    {
+      "text": "退出登录",
+      "url": "javascript:void(0);"
+    },
+    {
+      "text": "e交易App",
+      "url": "https://www.ejy365.com/static/html5/app/index.jsp"
+    },
+    {
+      "text": "e交易特色商城",
+      "url": "https://www.ejymall.com"
+    },
+    {
+      "text": "e交易抖音号",
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAqf2mD7I8ZawKb9FwwF-GaNYnpFfqsfUxBU-p_zS2xxA?from_tab_name=main"
+    },
+    {
+      "text": "e风采",
+      "url": "https://www.ejy365.com/news/"
+    },
+    {
+      "text": "e交易百科",
+      "url": "https://www.ejy365.com/wiki/"
+    },
+    {
+      "text": "在线咨询",
+      "url": "javascript:openKf();"
+    },
+    {
+      "text": "帮助中心",
+      "url": "https://www.ejy365.com/news_more?catagoryNum=004002&page=1&rows=20"
+    },
+    {
+      "text": "联系我们",
+      "url": "https://www.ejy365.com/contactUs"
+    },
+    {
+      "text": "建议/投诉",
+      "url": "javascript:openAdviceModal();"
+    },
+    {
+      "text": "关于e交易",
+      "url": "https://www.ejy365.com/aboutus/index"
+    },
+    {
+      "text": "全部",
+      "url": "javascript:;"
+    },
+    {
+      "text": "产权交易",
+      "url": "javascript:;"
+    },
+    {
+      "text": "招标采购",
+      "url": "javascript:;"
+    },
+    {
+      "text": "招商引资",
+      "url": "javascript:;"
+    },
+    {
+      "text": "项目预告",
+      "url": "javascript:;"
+    },
+    {
+      "text": "店铺",
+      "url": "javascript:;"
+    },
+    {
+      "text": "资讯",
+      "url": "javascript:;"
+    },
+    {
+      "text": "发布交易委托",
+      "url": "javascript:showfbjywt();"
+    },
+    {
+      "text": "资产招租",
+      "url": "https://www.ejy365.com/jygg_more?project_type=FCZZ"
+    },
+    {
+      "text": "废旧物资",
+      "url": "https://www.ejy365.com/jygg_more?project_type=WZ"
+    },
+    {
+      "text": "房地产",
+      "url": "https://www.ejy365.com/jygg_more?project_type=FC"
+    },
+    {
+      "text": "二手车",
+      "url": "https://www.ejy365.com/jygg_more?project_type=CL"
+    },
+    {
+      "text": "工美藏品",
+      "url": "https://www.ejy365.com/jygg_more?project_type=CP"
+    },
+    {
+      "text": "二手设备",
+      "url": "https://www.ejy365.com/jygg_more?project_type=ESSB"
+    },
+    {
+      "text": "股权",
+      "url": "https://www.ejy365.com/jygg_more?project_type=GQ"
+    },
+    {
+      "text": "债权",
+      "url": "https://www.ejy365.com/jygg_more?project_type=ZQ"
+    },
+    {
+      "text": "土地",
+      "url": "https://www.ejy365.com/jygg_more?project_type=TD"
+    },
+    {
+      "text": "知识产权",
+      "url": "https://www.ejy365.com/jygg_more?project_type=ZSCQ"
+    },
+    {
+      "text": "资源使用权",
+      "url": "https://www.ejy365.com/jygg_more?project_type=ZYSYQ"
+    },
+    {
+      "text": "林木",
+      "url": "https://www.ejy365.com/jygg_more?project_type=LQ"
+    },
+    {
+      "text": "矿权",
+      "url": "https://www.ejy365.com/jygg_more?project_type=KQ"
+    },
+    {
+      "text": "生态资源",
+      "url": "https://www.ejy365.com/jygg_more?project_type=STZY"
+    },
+    {
+      "text": "矿产品转让",
+      "url": "https://www.ejy365.com/jygg_more?project_type=KCP"
+    },
+    {
+      "text": "江苏",
+      "url": "https://www.ejy365.com/jygg_more?area_code=320000"
+    },
+    {
+      "text": "广东",
+      "url": "https://www.ejy365.com/jygg_more?area_code=440000"
+    },
+    {
+      "text": "内蒙古",
+      "url": "https://www.ejy365.com/jygg_more?area_code=150000"
+    },
+    {
+      "text": "新疆",
+      "url": "https://www.ejy365.com/jygg_more?area_code=650000"
+    },
+    {
+      "text": "黑龙江",
+      "url": "https://www.ejy365.com/jygg_more?area_code=230000"
+    },
+    {
+      "text": "湖南",
+      "url": "https://www.ejy365.com/jygg_more?area_code=430000"
+    },
+    {
+      "text": "甘肃",
+      "url": "https://www.ejy365.com/jygg_more?area_code=620000"
+    },
+    {
+      "text": "浙江",
+      "url": "https://www.ejy365.com/jygg_more?area_code=330000"
+    },
+    {
+      "text": "安徽",
+      "url": "https://www.ejy365.com/jygg_more?area_code=340000"
+    },
+    {
+      "text": "海南",
+      "url": "https://www.ejy365.com/jygg_more?area_code=460000"
+    },
+    {
+      "text": "山东",
+      "url": "https://www.ejy365.com/jygg_more?area_code=370000"
+    },
+    {
+      "text": "四川",
+      "url": "https://www.ejy365.com/jygg_more?area_code=510000"
+    },
+    {
+      "text": "云南",
+      "url": "https://www.ejy365.com/jygg_more?area_code=530000"
+    },
+    {
+      "text": "河北",
+      "url": "https://www.ejy365.com/jygg_more?area_code=130000"
+    },
+    {
+      "text": "广西",
+      "url": "https://www.ejy365.com/jygg_more?area_code=450000"
+    },
+    {
+      "text": "首页",
+      "url": "https://www.ejy365.com/"
+    },
+    {
+      "text": "产权交易",
+      "url": "https://www.ejy365.com/jygg_more"
+    },
+    {
+      "text": "招标采购",
+      "url": "https://www.ejy365.com/purchase/index"
+    },
+    {
+      "text": "竞价大厅",
+      "url": "https://www.ejy365.com/propertybid/index"
+    },
+    {
+      "text": "产权交易",
+      "url": "https://www.ejy365.com/propertybid/index"
+    },
+    {
+      "text": "快捷采购",
+      "url": "https://www.ejy365.com/zbcg_jjdt"
+    },
+    {
+      "text": "企采云",
+      "url": "https://www.ejy365.com/zzjy_jump"
+    },
+    {
+      "text": "农村产权",
+      "url": "https://nccq.ejy365.com"
+    },
+    {
+      "text": "特色商城",
+      "url": "https://www.ejymall.com"
+    },
+    {
+      "text": "曝光台",
+      "url": "https://www.ejy365.com/news_more?catagoryNum=028&page=1&rows=20"
+    },
+    {
+      "text": "关于我们",
+      "url": "https://www.ejy365.com/aboutus/index"
+    },
+    {
+      "text": "首页",
+      "url": "https://www.ejy365.com"
+    },
+    {
+      "text": "产权交易",
+      "url": "https://www.ejy365.com/jygg_more"
+    },
+    {
+      "text": "南京市",
+      "url": "https://www.ejy365.com/jygg_more?area_code=320100"
+    },
+    {
+      "text": "资产招租",
+      "url": "https://www.ejy365.com/jygg_more?project_type=FCZZ"
+    },
+    {
+      "text": "防诈骗通知",
+      "url": "https://www.ejy365.com/newsinfo?infoid=fc805a43-a542-45bc-b1d6-3fd7b5f4cc8c"
+    },
+    {
+      "text": "www.ejy365.com",
+      "url": "https://www.ejy365.com"
+    },
+    {
+      "text": "e交易平台电子竞价交易规则",
+      "url": "https://www.ejy365.com/newsinfo?infoid=f5bd29b0-1330-4485-8b29-9e0ded09fe86"
+    },
+    {
+      "text": "e交易平台产权交易操作指南",
+      "url": "https://www.ejy365.com/news_more?catagoryNum=034001&page=1&rows=20"
+    },
+    {
+      "text": "微信",
+      "url": "https://www.ejy365.com/info/ejy313972"
+    },
+    {
+      "text": "微博",
+      "url": "https://www.ejy365.com/info/ejy313972"
+    },
+    {
+      "text": "QQ",
+      "url": "https://www.ejy365.com/info/ejy313972"
+    },
+    {
+      "text": "取消关注",
+      "url": "javascript:is_login()?cancelFocus():$('#cancelFocus').click();void(0);"
+    },
+    {
+      "text": "加关注",
+      "url": "javascript:is_login()?addFocus():$('#addFocus').click();void(0);"
+    },
+    {
+      "text": "已成交",
+      "url": "javascript:void(0);"
+    },
+    {
+      "text": "产权贷",
+      "url": "javascript:void(0);"
+    },
+    {
+      "text": "产权贷",
+      "url": "https://www.ejy365.com/cqd_more"
+    },
+    {
+      "text": "常见问题",
+      "url": "https://www.ejy365.com/questionList?page=1&rows=20"
+    },
+    {
+      "text": "进入店铺",
+      "url": "https://www.ejy365.com/shop/shop_index?id=574"
+    },
+    {
+      "text": "www.ejy365.com",
+      "url": "http://www.ejy365.com"
+    },
+    {
+      "text": "《e交易平台会员注册须知》",
+      "url": "https://www.ejy365.com/newsinfo?infoid=f87a98ef-df11-4ea7-9100-98370f06af9a"
+    },
+    {
+      "text": "《e交易平台电子交易风险告知及接受确认书》",
+      "url": "https://www.ejy365.com/newsinfo?infoid=6820a56e-49af-446f-af89-2f1ce942c8be"
+    },
+    {
+      "text": "《e交易平台电子竞价交易规则》",
+      "url": "https://www.ejy365.com/newsinfo?infoid=4aebf9fb-fd9d-4390-8278-f4976b344183"
+    },
+    {
+      "text": "承租承诺函-无工程规划或产权证模版.doc",
+      "url": "https://cqjy.ejy365.com//upload/doc/2025/03/19/42d8715d0f0a4358b34141ba2c1f28dd.doc"
+    },
+    {
+      "text": "房屋租赁合同样稿.pdf",
+      "url": "https://cqjy.ejy365.com//upload/doc/2025/03/19/2b7152dfb6cb4c5f85f5aa1721635b0d.pdf"
+    },
+    {
+      "text": "[广州市]出租广州市白云区百顺南路208-216号（双）集贤苑1栋101号铺\n                                                \n                                                    \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n\t                \t\t\t\t\t\t\t\t\t挂牌价：17,602元/月/总面积",
+      "url": "https://www.ejy365.com/info/web22561"
+    },
+    {
+      "text": "[广州市]出租广州市白云区集益街31号41(单号)101房(10栋自编124铺)\n                                                \n                                                    \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n\t                \t\t\t\t\t\t\t\t\t挂牌价：8,971元/月/总面积",
+      "url": "https://www.ejy365.com/info/web19374"
+    },
+    {
+      "text": "[广州市]出租广州市白云区广花三路合益一街37号602房\n                                                \n                                                    \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n                                                        \n\t                \t\t\t\t\t\t\t\t\t挂牌价：1,753元/月/总面积",
+      "url": "https://www.ejy365.com/info/web19344"
+    },
+    {
+      "text": "[泰州市]泰兴市鼓楼南路春区6幢302室车库再次公开招租\n                                                \n                                                    \n                                                        \n                                                        \n\t\t\t\t                        \t\t\t\t\t挂牌价：\n\t\t\t\t\t                        \t\t\t\t\t500.00\n\t\t\t\t\t                        \t\t\t\t\t\n                                                                    元/年",
+      "url": "https://www.ejy365.com/info/ejy367322"
+    },
+    {
+      "text": "[泰州市]泰兴市鼓楼南路春区6幢302室再次公开招租\n                                                \n                                                    \n                                                        \n                                                        \n\t\t\t\t                        \t\t\t\t\t挂牌价：\n\t\t\t\t\t                        \t\t\t\t\t7,211.00\n\t\t\t\t\t                        \t\t\t\t\t\n                                                                    元/年",
+      "url": "https://www.ejy365.com/info/ejy367321"
+    },
+    {
+      "text": "[泰州市]泰兴市悦府4幢112室再次公开招租\n                                                \n                                                    \n                                                        \n                                                        \n\t\t\t\t                        \t\t\t\t\t挂牌价：\n\t\t\t\t\t                        \t\t\t\t\t34,039.00\n\t\t\t\t\t                        \t\t\t\t\t\n                                                                    元/年",
+      "url": "https://www.ejy365.com/info/ejy364793"
+    },
+    {
+      "text": "[泰州市]泰兴市鼓楼南路冬区11幢701室再次公开招租\n                                                \n                                                    \n                                                        \n                                                        \n\t\t\t\t                        \t\t\t\t\t挂牌价：\n\t\t\t\t\t                        \t\t\t\t\t5,130.00\n\t\t\t\t\t                        \t\t\t\t\t\n                                                                    元/年",
+      "url": "https://www.ejy365.com/info/ejy363045"
+    },
+    {
+      "text": "[常州市]常州市武进区常武中路18-18号1幢20层的房屋公开招租(再次挂牌)\n                                                \n                                                    \n                                                        \n                                                        \n\t\t\t\t                        \t\t\t\t\t挂牌价：\n\t\t\t\t\t                        \t\t\t\t\t443,540.00\n\t\t\t\t\t                        \t\t\t\t\t\n                                                                    元/年",
+      "url": "https://www.ejy365.com/info/ejy363027"
+    },
+    {
+      "text": "查看更多 >",
+      "url": "https://www.ejy365.com/jygg_more?XiaQuCode=101017"
+    },
+    {
+      "text": "郑州粮油物资投资集团有限公司19项商标转让公告",
+      "url": "https://www.ejy365.com/info/web29025"
+    },
+    {
+      "text": "云南昭通变压器一批",
+      "url": "https://www.ejy365.com/info/web29024"
+    },
+    {
+      "text": "云南昭通水泵、配电箱、阀门等一批",
+      "url": "https://www.ejy365.com/info/web29023"
+    },
+    {
+      "text": "云南昭通地磅、油罐一批",
+      "url": "https://www.ejy365.com/info/web29022"
+    },
+    {
+      "text": "云南昭通砂石、注浆、钢筋加工、检测等设备一批",
+      "url": "https://www.ejy365.com/info/web29021"
+    },
+    {
+      "text": "云南昭通全站仪、无人机一批",
+      "url": "https://www.ejy365.com/info/web29020"
+    },
+    {
+      "text": "云南昭通材料大棚一批",
+      "url": "https://www.ejy365.com/info/web29019"
+    },
+    {
+      "text": "云南昭通发电机组一批",
+      "url": "https://www.ejy365.com/info/web29018"
+    },
+    {
+      "text": "云南昭通制冰机一批",
+      "url": "https://www.ejy365.com/info/web29017"
+    },
+    {
+      "text": "山西省晋城10个200吨粉料罐一批",
+      "url": "https://www.ejy365.com/info/web29016"
+    },
+    {
+      "text": "山西省晋城180搅拌机组（2套）一批",
+      "url": "https://www.ejy365.com/info/web29015"
+    },
+    {
+      "text": "中铁十一局建安公司关于废旧铜电缆头的竞价",
+      "url": "https://www.ejy365.com/info/web29014"
+    },
+    {
+      "text": "中铁十八局集团第一工程有限公司厦门轨道6号线集美至同安段土建施工总承包2标段一工区项目部废旧洗车台竞价公告",
+      "url": "https://www.ejy365.com/info/web29013"
+    },
+    {
+      "text": "中铁十四局集团有限公司石河子市文化馆（美术馆）项目废旧钢筋材料竞价单",
+      "url": "https://www.ejy365.com/info/web29012"
+    },
+    {
+      "text": "11.8广东地区废旧钢模板及废铁委托处置",
+      "url": "https://www.ejy365.com/info/web29010"
+    },
+    {
+      "text": "广东梅州废旧防护材料一批处置（拉货权）询价",
+      "url": "https://www.ejy365.com/info/web29009"
+    },
+    {
+      "text": "襄宜高速公路宜昌段XYYCTJ-5项目经理部废旧钢材处置1",
+      "url": "https://www.ejy365.com/info/web29008"
+    },
+    {
+      "text": "中铁十四局集团有限公司 石河子市人民医院新院区项目经理部关于临建材料竞价",
+      "url": "https://www.ejy365.com/info/web29007"
+    },
+    {
+      "text": "关于e交易",
+      "url": "https://www.ejy365.com/aboutus/index"
+    },
+    {
+      "text": "诚聘英才",
+      "url": "https://www.ejy365.com/cpycinfo?id=2070"
+    },
+    {
+      "text": "法律声明",
+      "url": "https://www.ejy365.com/newsinfo?infoid=98f120c7-b145-449a-bc5e-5c304c14b661"
+    },
+    {
+      "text": "注册账号",
+      "url": "https://www.ejy365.com/newsinfo?infoid=162a9d42-f933-45ea-90b8-b244cb8f5063"
+    },
+    {
+      "text": "报名指南",
+      "url": "https://www.ejy365.com/newsinfo?infoid=3ab4e333-e0d0-4163-a67c-f56052e135f3"
+    },
+    {
+      "text": "竞价指南",
+      "url": "https://www.ejy365.com/newsinfo?infoid=25dedbd6-ae3a-4f52-b719-59568a3e90bc"
+    },
+    {
+      "text": "平台公告",
+      "url": "https://www.ejy365.com/news_more?catagoryNum=030&page=1&rows=20"
+    },
+    {
+      "text": "e风采",
+      "url": "https://www.ejy365.com/news/"
+    },
+    {
+      "text": "曝光台",
+      "url": "https://www.ejy365.com/news_more?catagoryNum=028&page=1&rows=20"
+    },
+    {
+      "text": "产权交易规则",
+      "url": "https://www.ejy365.com/news_more?catagoryNum=027001&page=1&rows=20"
+    },
+    {
+      "text": "招标采购规则",
+      "url": "https://www.ejy365.com/news_more?catagoryNum=027002&page=1&rows=20"
+    },
+    {
+      "text": "加盟流程",
+      "url": "https://www.ejy365.com/newsinfo?catagoryNum=014001"
+    },
+    {
+      "text": "加盟优势",
+      "url": "https://www.ejy365.com/newsinfo?catagoryNum=014002"
+    },
+    {
+      "text": "加盟条件",
+      "url": "https://www.ejy365.com/newsinfo?catagoryNum=014003"
+    },
+    {
+      "text": "苏公网安备32040402000423",
+      "url": "https://beian.mps.gov.cn/#/query/webSearch?code=32040402000423"
+    },
+    {
+      "text": "苏ICP备17061038号-1",
+      "url": "https://beian.miit.gov.cn"
+    },
+    {
+      "text": "增值电信业务经营许可证 苏B2-20180315",
+      "url": "https://beian.miit.gov.cn"
+    },
+    {
+      "text": "网站地图",
+      "url": "https://www.ejy365.com/seo/map"
+    },
+    {
+      "text": "e交易平台自律公约",
+      "url": "https://www.ejy365.com/static/html/pact.htm"
+    },
+    {
+      "text": "电商平台公约",
+      "url": "https://www.ejy365.com/static/html/e-commerce-pact.htm"
+    },
+    {
+      "text": "产权交易",
+      "url": "https://www.ejy365.com/jygg_more"
+    },
+    {
+      "text": "招标采购",
+      "url": "https://www.ejy365.com/purchase/list"
+    },
+    {
+      "text": "×",
+      "url": "javascript:;"
+    },
+    {
+      "text": "我要注册",
+      "url": "https://www.ejy365.com/info/register"
+    },
+    {
+      "text": "《借款人条件及借款产品内容》",
+      "url": "https://www.ejy365.com/static/html/jkrtjjjkcpnr.pdf"
+    },
+    {
+      "text": "《“产权贷”贷款申请资料清单》",
+      "url": "https://www.ejy365.com/static/html/cdqdksqzlqd.docx"
+    },
+    {
+      "text": "《真实性承诺书》",
+      "url": "https://www.ejy365.com/static/html/zsxcns.docx"
+    },
+    {
+      "text": "去报名",
+      "url": "javascript:void(0);"
+    },
+    {
+      "text": "取消",
+      "url": "javascript:void(0);"
+    }
+  ],
+  "images": [
+    "https://www.ejy365.com/static/images/big-ejyapp.png",
+    "https://www.ejy365.com/static/images/big-ejyapp.png",
+    "https://www.ejy365.com/static/images/big-wx-gzh.png",
+    "https://www.ejy365.com/static/images/big-wx-gzh.png",
+    "https://www.ejy365.com/static/images/big-tssc.png",
+    "https://www.ejy365.com/static/images/big-tssc.png",
+    "https://www.ejy365.com/static/images/big-douyin.png",
+    "https://www.ejy365.com/static/images/big-douyin.png",
+    "https://www.ejy365.com/valcode",
+    "https://www.ejy365.com/upload/ad/2020/04/13/9c89eea8-59eb-4057-9e8f-818048fbd93a.png",
+    "https://pic.ejy365.com/cqjy/upload/doc/2025/03/19/min_dc333049637841b18b460c57d560b922.jpg",
+    "https://www.ejy365.com/static/html/images/weichat.png",
+    "https://www.ejy365.com/static/html/images/microblog.png",
+    "https://www.ejy365.com/static/html/images/qq.png",
+    "https://www.ejy365.com/static/html/images/print.png",
+    "https://www.ejy365.com/static/html/images/qrcode.png",
+    "https://www.ejy365.com/upload/ad/2020/04/13/9c89eea8-59eb-4057-9e8f-818048fbd93a.png",
+    "https://file.gemas.com.cn//upload/doc/2026/09/04/4481daf6787646178073cf8e10e7b7ec.png",
+    "https://file.gemas.com.cn//upload/doc/2026/08/05/0034f050f7ef42ad8d8726f61d585f96.jpg",
+    "https://file.gemas.com.cn//upload/doc/2026/06/03/904bc4e0d00840e695ed823d0bf20c1f.jpg",
+    "https://pic.ejy365.com/cqjy/upload/doc/2025/08/29/mid_f8ad190e1536461cae0699e67f27505b.jpg",
+    "https://pic.ejy365.com/cqjy/upload/doc/2025/08/29/mid_a9c030b48f7f4c5fa2ead4cff42581b6.JPG",
+    "https://pic.ejy365.com/cqjy/upload/doc/2025/10/27/mid_a0d67b6d3ba243e8ad21b66a2fd09841.jpg",
+    "https://pic.ejy365.com/cqjy/upload/doc/2025/07/10/mid_f26bc1ab79734736aceef3ffa1eec272.JPG",
+    "https://pic.ejy365.com/cqjy/upload/doc/2025/12/23/mid_d0ff7f9035694887a3dd704001ca7a6c.jpg",
+    "https://www.ejy365.com/static/index_v2/images/gongzhonghao-ico.png?20240314",
+    "https://www.ejy365.com/static/index_v2/images/douyin.png?20240314",
+    "https://www.ejy365.com/static/images/beian.png",
+    "https://www.ejy365.com/static/html/images/right-ico-wx.jpg?v=20240314",
+    "https://www.ejy365.com/valcode"
+  ]
+}

@@ -1,0 +1,778 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    
+
+
+<title>
+    e交易-全国性标准化非标资产交易平台
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="e交易">
+<meta name="description" content="e交易-全国性标准化非标资产交易平台。面向全国产权交易中心、公共资源交易中心、招标采购代理机构、大型国有企业、民企、采购商、供应商提供电子招投标全流程交易和精准的在线交易解决方案服务.">
+<meta name="applicable-device"content="pc">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="e交易">
+<link rel="shortcut icon" href="https://www.ejy365.com/favicon.ico"  type="image/vnd.microsoft.icon"/>
+<link rel="icon" href="https://www.ejy365.com/favicon.ico" type="image/vnd.microsoft.icon">
+
+<script>
+    //该变量在js中使用
+    var environment_key = "run";
+    var basePath = 'https://www.ejy365.com/';
+    var basePath_js = "https://www.ejy365.com/";
+    //当前时间戳
+    var serverMs =1794151923585;
+    //设置跨域问题
+    var domain = "ejy365.com";
+    if(!domain) {
+        domain = "ejy365.com";
+    }
+    var rootFullPath = basePath_js;
+    if (rootFullPath.indexOf('http') < 0) {
+        rootFullPath = location.protocol + rootFullPath;
+    }
+    var ucenterUrl = 'https://ucenter.ejy365.com';
+</script>
+<script src="https://www.ejy365.com/static/js/window.open.util.js?17934286531771"></script>
+
+    <meta name="robots" content="noindex,nofollow">
+    <title>产权交易</title>
+    <link rel="stylesheet" href="https://www.ejy365.com/static/html/css/base.css?1793428653177">
+    <link rel="stylesheet" href="https://www.ejy365.com/static/html/css/detail.css?1793428653177">
+    <link rel="stylesheet" href="https://www.ejy365.com/static/js/ejy_baoming/css/style.css?1793428653177">
+    <script src="https://www.ejy365.com/static/html/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="https://www.ejy365.com/static/ext/echarts.min.js"></script>
+    <script type="text/javascript" src="https://www.ejy365.com/static/js/ejy_baoming/js/infodetail.js?17934286531772"></script>
+    <style type="text/css">
+        .jygg_news_detail_tr td {height: 35px;border:solid 1px #ddd;padding: 5px;}
+        .new-jygg-btn{cursor: pointer;padding: 2px;}
+        .listshowmore{width: 100%; padding:20px 0px; height: 30px; text-align:center;}
+        .listshowmore button{width: 150px;height: 30px;display: inline-block;margin: 0px auto; cursor: pointer;  border: 0px; background: #dd342c;  color: #fff;}
+        .listshowmore button:hover{background:#b61109;}
+    </style>
+    <script type="text/javascript">
+        var zccz_baoming_url = 'https://zccz.ejy365.com/signlogin/pcindex';
+        //标的列表增加loading效果图，页面加载后隐藏;
+        window.onload=function (){
+            $(window.parent.document).find("div[id='bdlb-loading']").hide();
+        }
+        //批量挂牌项目直接显示竞价详情
+
+        
+        $(function(){
+            var ispllr = "1";
+            var fromFlag = "0";
+            if(fromFlag == '2'){
+                $("#cjggdetail").show();
+                $("#jmjl").hide();
+                $("#jygg_news_detail_table").hide();
+            }else if(ispllr != '1'){
+                $("#jmjl").show();
+            }else{
+                if(fromFlag == '1'){
+                    $("#jmjl").show();
+                    $("#cjggdetail").hide();
+                    $("#jygg_news_detail_table").hide();
+                }else{
+                    $("#jmjl").hide();
+                    $("#cjggdetail").hide();
+                    $("#jygg_news_detail_table").show();
+                }
+            }
+        });
+
+        function jmjl(projectGuid,jingjiafangshi,jjia_status,currencyunit){
+            backToTop();
+            $('#jmjl').empty();
+            $("#showmore").hide();
+            $("#jygg_news_detail_table").hide();
+            $("#jmjl").show();
+            
+            $.ajax({
+                type: "post",
+                url: "/jmjl_detail",
+                dataType: "json",
+                data: {
+                    infoid: 'ZZCQ2025031000045',
+                    projectGuid: projectGuid,
+                    jingJiaFangShi: jingjiafangshi,
+                    projectStatus: jjia_status,
+                    currencyunit: currencyunit
+                },
+                method: "post",
+                success: function (data) {
+                    var gg = data.gg;
+                    var his = data.his;
+                    var baojiaHis = data.baojiaHis;
+                    var his_erci = data.his_erci;
+                    var baojiaHis_erci = data.baojiaHis_erci;
+                    var firstCurrencyUnit = data.firstCurrencyUnit;
+                    var secondCurrencyUnit = data.secondCurrencyUnit;
+                    var html = "";
+
+                    html += "<table >";
+                    if (gg.ispllr == '1' && gg.infoid != 'ZZCQ2020080400004') {
+                        html += " <tr><td><div style=\"text-align: center;width: 100%;    padding: 10px;\">";
+                        html += "<button style=\"cursor: pointer; height: 30px; border: none; background-color: orange; padding: 0px 10px; color: #fff;\" onclick=\"backobjects()\">返回标的列表</button>";
+                        html += "</div></td><td></td></tr>";
+                    }
+                    html += "<tr>";
+                    html += "<td>";
+                    //竞价历史
+                    if (gg.allowmorejqxt == '1') {
+                        html += " <div style=\"text-align: center;width: 100%;\"><h3 class=\"clearfix pt10 pb10 ta-c\">第一次竞价</h3></div>";
+                    }
+                    html += "<div style=\"width: 420px;float: left;margin-right: 10px;position: relative;z-index: 10000;\">";
+
+                    html += "<div style=\"background:#f1f1f1; border-top: 1px #ddd solid; height: 25px;\" class=\"celearfix\">";
+                    html += " <table style=\"width: 420px;float: left;font-size:14px;\" class=\"table table-striped\">";
+                    html += "<tbody>";
+                    html += "<tr class=\"tr1\">";
+                    html += "<td nowrap=\"nowrap\" width=\"40px\" >序号</td>";
+                    html += "<td nowrap=\"nowrap\" width=\"80px\"> 竞买号</td>";
+                    if (gg.systemtype == 'GQ') {
+                        html += "<td width=\"100px\" > 报价(万元) </td>";
+                    } else if (gg.systemtype == 'ZZKG' && gg.zzkg_guapaitype == '1') {
+                        html += "<td width=\"100px\" > 报价(万元) </td>";
+                    } else {
+                        if (firstCurrencyUnit == '0' || firstCurrencyUnit == '1') {
+                            html += "<td nowrap=\"nowrap\" width=\"80px\"> 报价(元)</td>";
+                        } else if (firstCurrencyUnit == '2') {
+                            html += "<td nowrap=\"nowrap\" width=\"80px\"> 报价(万元)</td>";
+                        } else if (firstCurrencyUnit == '3') {
+                            html += "<td nowrap=\"nowrap\" width=\"80px\"> 增值率(%)</td>";
+                        }
+
+                    }
+                    html += "<td align=\"center\"> 时间 <span title=\"报价处理完成时间\" style=\"border-radius: 50px;background:#dd342c;display: inline-block;height: 16px;width: 16px;overflow: hidden;color: #fff;    line-height: 16px;font-size: 12px;vertical-align: middle;    cursor: pointer;    font-weight: normal;    margin-top: -2px;    margin-left: 4px;\">!</span></td>";
+                    html += "</tr>";
+                    html += "</tbody>";
+                    html += "</table>";
+                    html += "</div>";
+                    html += "<div style=\"width: 100%;overflow-y:auto;height:330px; float: left;overflow:auto;\">";
+                    html += "<table style=\"width: 400px;float: left;font-size:14px;\" class=\"table table-striped only\">";
+                    html += "<tbody>";
+                    if (his == null || his.length == 0) {
+                        html += "<tr><td colspan=\"3\" style=\"color: red;text-align: left;\"  height=\"27\" >当前暂无出价 </td></tr>";
+                    } else {
+                        //获取倒序的序号
+                        for (var t = 0; t < his.length; t++) {
+                            var index = his.length - t;
+                            html += "<tr>";
+                            html += "<td width=\"40px\" height=\"27\" align=\"center\">" + index + "</td>";
+                            html += "<td width=\"80px\" class=\"tr-end\" height=\"27\">";
+                            if (gg.infoid == 'b2bd96c5-482e-484e-b3c6-0e8f55e9809a'
+                                || projectGuid == 'N0118WZ210113'
+                                || projectGuid == 'N0118WZ210124'
+                                || projectGuid == 'N0118WZ210125'
+                                || projectGuid == 'N0118WZ210126'
+                                || projectGuid == 'N0118WZ210127'
+                                || projectGuid == 'N0118WZ210128'
+                                || gg.infoid == 'N0118WZ210129'
+                                || data.numberShow == '1') {
+                                html += "*****";
+                            } else {
+                                html += his[t].code;
+                            }
+                            html += "</td>";
+                            html += "<td width=\"80px\" class=\"tr-end \" align=\"center\">" + his[t].price + "</td>";
+                            html += "<td class=\"tr-end\" align=\"center\" nowrap=\"nowrap\">" + his[t].bj_time + "</td>";
+                            html += "</tr>";
+                        }
+
+                    }
+                    html += "</tbody>";
+                    html += "</table>";
+                    html += "</div>";
+                    html += "</div>";
+                    html += "</td>";
+                    //竞价曲线
+                    html += "<td>";
+                    html += "<div id=\"main\" style=\"width: 500px;height:400px;float: right;overflow: auto;\"></div>";
+                    var xAxis_data = [];
+                    var series_data = [];
+                    for (var b = 0; b < baojiaHis.length; b++) {
+                        xAxis_data.push(baojiaHis[b].date.substring(0, 10) + "\n" + baojiaHis[b].date.substring(10, 23));
+                        var price = baojiaHis[b].price;
+                        price = price.replace(new RegExp(",", "gm"), "");
+                        series_data.push(price);
+                    }
+                    var showSymbol = his.length == 1 ? true : false;
+                    var option = {
+                        title: {
+                            //text: '竞价曲线',
+                            subtext: '竞价走势'
+                        },
+                        tooltip: {
+                            trigger: 'axis'
+                        },
+                        legend: {
+                            data: ['竞价曲线']
+                        },
+                        toolbox: {
+                            x: 'center',
+                            show: true
+                        },
+                        calculable: true,
+                        xAxis: [
+                            {
+                                type: 'category',
+                                boundaryGap: false,
+                                data: xAxis_data
+                            }
+                        ],
+                        yAxis: [
+                            {
+                                type: 'value',
+                                axisLabel: {
+                                    inside: true
+                                },
+                                min: 'dataMin'
+                                //offset:-50,
+                            }
+                        ],
+                        series: [
+                            {
+                                name: '报价金额',
+                                type: 'line',
+                                stack: '总量',
+                                showSymbol: showSymbol,
+                                data: series_data
+                            }
+                        ]
+                    };
+                    var interval = setInterval(function () {
+                        try {
+                            var myChart = echarts.init(document.getElementById('main'));
+                            myChart.setOption(option);
+                            window.clearInterval(interval);
+                        } catch (err) {
+                        }
+                    }, 1000);
+                    html += "</td>";
+                    html += "</tr>";
+                    html += "</table>";
+
+                    //二次竞价  开始
+                    if (gg.allowmorejqxt == '1') {
+                        html += "<table>";
+                        html += "<tr>";
+                        html += "<td>";
+                        html += "<div class=\"p clearfix\" >";
+                        //二次竞价历史
+                        html += "<div style=\"text-align: center;width: 100%;\">";
+                        html += "<h3 class=\"clearfix pt10 pb10 ta-c\">第二次竞价</h3>";
+                        html += "</div>";
+                        html += "<div style=\"width: 420px;float: left;margin-right: 10px;position: relative;z-index: 10000;\">";
+                        html += "<div style=\"background:#f1f1f1;height: 25px;\" class=\"celearfix\">";
+                        html += "<table style=\"width: 420px;float: left;font-size:14px;\" class=\"table table-striped\">";
+                        html += "<tbody>";
+                        html += "<tr class=\"tr1\">";
+                        html += "<td nowrap=\"nowrap\" width=\"40px\" >序号</td>";
+                        html += "<td nowrap=\"nowrap\" width=\"80px\"> 竞买号</td>";
+                        if (gg.systemtype == 'GQ' || (gg.systemtype == 'ZZKG' && gg.zzkg_guapaitype == '1')) {
+                            html += "<td width=\"100px\" > 报价(万元) </td>";
+                        } else {
+                            if (secondCurrencyUnit == '0' || secondCurrencyUnit == '1') {
+                                html += "<td nowrap=\"nowrap\" width=\"80px\"> 报价(元)</td>";
+                            } else if (secondCurrencyUnit == '2') {
+                                html += "<td nowrap=\"nowrap\" width=\"80px\"> 报价(万元)</td>";
+                            } else if (secondCurrencyUnit == '3') {
+                                html += "<td nowrap=\"nowrap\" width=\"80px\"> 增值率(%)</td>";
+                            }
+                        }
+                        html += "<td align=\"center\"> 时间 <span title=\"报价处理完成时间\" style=\"border-radius: 50px;background:#dd342c;display: inline-block;height: 16px;width: 16px;overflow: hidden;color: #fff;    line-height: 16px;font-size: 12px;vertical-align: middle;    cursor: pointer;    font-weight: normal;    margin-top: -2px;    margin-left: 4px;\">!</span></td>";
+                        html += "</tr>";
+                        html += "</tbody>";
+                        html += "</table>";
+                        html += "</div>";
+                        html += "<div style=\"overflow-y:auto;height:330px; float: left;\">";
+                        html += "<table style=\"width: 400px;float: left;font-size:14px; text-align:center;\" class=\"table table-striped only\">";
+                        html += "<tbody>";
+                        if (his_erci == null || his_erci.length == 0) {
+                            html += "<tr><td colspan=\"3\" style=\"color: red;text-align: left;\">当前暂无出价</td></tr>";
+                        } else {
+                            for (var b = 0; b < his_erci.length; b++) {
+                                var index = his_erci.length - b;
+                                html += "<tr>";
+                                html += "<td  width=\"40px\"  height=\"27\"  align=\"center\">" + index + "</td>";
+                                html += "<td width=\"80px\" class=\"tr-end\" height=\"27\" >";
+                                if (gg.infoid == 'b2bd96c5-482e-484e-b3c6-0e8f55e9809a' || data.numberShow == '1') {
+                                    html += "*****";
+                                } else {
+                                    html += his_erci[b].code;
+                                }
+                                html += "</td>";
+                                html += "<td width=\"80px\" class=\"tr-end \"  align=\"center\">" + his_erci[b].price + "</td>";
+                                html += "<td class=\"tr-end\" nowrap=\"nowrap\">" + his_erci[b].bj_time + "</td>";
+                                html += "</tr>";
+                            }
+                        }
+                        html += "</tbody>";
+                        html += "</table>";
+                        html += "</div>";
+                        html += "</div>";
+                        html += "</div>";
+                        html += "</td>";
+                        //二次竞价曲线
+                        html += "<td>";
+                        html += "<div id=\"main_2\" style=\"width: 520px;height:400px;float: right;overflow: auto;\"></div>";
+                        var xAxis_data2 = [];
+                        var series_data2 = [];
+                        for (var c = 0; c < baojiaHis_erci.length; c++) {
+                            xAxis_data2.push(baojiaHis_erci[c].date.substring(0, 10) + "\n" + baojiaHis_erci[c].date.substring(10, 23));
+                            var price2 = baojiaHis_erci[c].price;
+                            price2 = price2.replace(new RegExp(",", "gm"), "");
+                            series_data2.push(price2);
+                        }
+                        //baojiaHis
+                        //曲线图
+                        var showSymbol = his_erci.length == 1 ? true : false;
+                        var option2 = {
+                            title: {
+                                //text: '竞价曲线',
+                                subtext: '竞价走势'
+                            },
+                            tooltip: {
+                                trigger: 'axis'
+                            },
+                            legend: {
+                                data: ['竞价曲线']
+                            },
+                            toolbox: {
+                                x: 'center',
+                                show: true
+                            },
+                            calculable: true,
+                            xAxis: [
+                                {
+                                    type: 'category',
+                                    boundaryGap: false,
+                                    data: xAxis_data2
+                                }
+                            ],
+                            yAxis: [
+                                {
+                                    type: 'value',
+                                    axisLabel: {
+                                        inside: true
+                                    },
+                                    min: 'dataMin'
+                                    //offset:-50,
+                                }
+                            ],
+                            series: [
+                                {
+                                    name: '报价金额',
+                                    type: 'line',
+                                    stack: '总量',
+                                    showSymbol: showSymbol,
+                                    data: series_data2
+                                }
+                            ]
+                        };
+
+
+                        setTimeout(function () {
+                            try {
+                                var myChart2 = echarts.init(document.getElementById('main_2'));
+                                myChart2.setOption(option2);
+                            } catch (err) {
+                            }
+                        }, 1000);
+
+                        html += "</td>";
+                        html += "</tr>";
+                        html += "</table>";
+                    }
+                    $('#jmjl').append(html);
+                }
+            });
+        }
+
+        function cjggdetail(infoId,systemType,ggtype,projectGuid){
+            backToTop();
+            $('#cjggdetail').empty();
+            $("#showmore").hide();
+            $("#jygg_news_detail_table").hide();
+            $("#cjggdetail").show();
+            $.ajax({
+                type: "post",
+                url: "/jmjl_cjggdetail",
+                dataType: "json",
+                data: {
+                    tag:'cjgonggao',
+                    jyInfoid: infoId,
+                    systemType: systemType,
+                    infoid:'ZZCQ2025031000045',
+                    projectGuid: projectGuid,
+                    ggtype:ggtype
+                },
+                method: "post",
+                success: function (data) {
+                    var newsDetail = data.newsDetail;
+                    var html = "";
+                    html += "<div class=\"clearfix\">";
+                    html += "<div style=\"text-align: left;width: 100%;    padding: 10px;\">";
+                    html += "<button style=\"cursor: pointer; height: 30px; border: none; background-color: orange; padding: 0px 10px; color: #fff;\" onclick=\"backobjects()\">返回标的列表</button>";
+                    html += "</div>";
+                    html += "<div class=\"detail-box\">";
+                    html += "<div class=\"box\">";
+                    html += "<h2 style=\"text-align: center\">"+newsDetail.title+"</h2>";
+                    html += "<div class=\"clearfix pb20\"></div>";
+                    html += "<div class=\"time\" style=\"text-align: center\">发布时间 "+newsDetail.infodate+"&nbsp;&nbsp;&nbsp;"+newsDetail.click +"次阅读&nbsp;&nbsp;&nbsp;<a target=\"_blank\" href=\"https://www.ejy365.com/\" class=\"time logourl\">e交易平台</a></div>";
+                    html += "<div class=\"box\">"+newsDetail.content +"</div>";
+                    html += "</div>";
+                    html += "</div>";
+                    html += "</div>";
+                    html += "<div class=\"clear pb15\"></div>";
+
+                    $('#cjggdetail').append(html);
+                }
+            });
+        }
+        //从竞价详情页返回标的列表页
+        function backobjects(){
+            $("#jygg_news_detail_table").show();
+            $("#showmore").show();
+            $("#jmjl").hide();
+            $("#cjggdetail").hide();
+        }
+
+        //回到列表顶部  不支持跨域
+        function backToTop(){
+            //try catch 解决其他网站嵌入详情页跨域报错问题
+            try{
+                parent.$('#jmlllllll').click()
+
+            }catch (e) {
+
+            }
+
+        }
+
+        //标的列表
+        function showmore(page){
+            $('.listshowmore').remove();
+            $('#bdTab').append("<div id=\"loading\" style='width: 100%;text-align: center;padding: 10px 0px;'>正在加载...</div>");
+            $.ajax({
+                type : "post",
+                url : "/jmjl_ajax",
+                dataType: "json",
+                data: {infoid: 'ZZCQ2025031000045', systemtype: 'QC_ZCCZ', ispllr: '1', page: page},
+                method : "post",
+                success: function (data) {
+                    console.log(data);
+                    if (data.projectList!=null && data.projectList.length > 0) {
+                        $('#loading').remove();
+                        var html = "";
+                        for (var i = 0; i < data.projectList.length; i++) {
+                            var jjdt = data.projectList[i];
+                            var zhuanTingGuid = jjdt.zhuanTingGuid ? jjdt.zhuanTingGuid : '';
+                            html+="<tr class=\"jygg_news_detail_tr\">";
+                            html+="<td>" + jjdt.ProjectName + "</td>";
+                            html+="<td>" + jjdt.BiaoDuanNo + "</td>";
+                            if ("101023"=='101017' || "101024"=='101017' || "101022"=='101017' || "101068"=='101017') {
+                                var GongGaoFromDate = jjdt.GongGaoFromDate + "";
+                                var GongGaoToDate = jjdt.GongGaoToDate + "";
+                                html += "<td>" + (GongGaoFromDate == null ? "" : GongGaoFromDate.substring(0, 10)) + "</td>";
+                                html += "<td>" + (GongGaoToDate == null ? "" : GongGaoToDate.substring(0, 10)) + "</td>";
+                            } else {
+                                html += "<td>" + jjdt.GongGaoFromDate + "</td>";
+                                html += "<td>" + jjdt.GongGaoToDate + "</td>";
+                            }
+                            html+="<td>" + jjdt.bzjMoney + "元</td>";
+                            html +="<td>" + jjdt.guapaiprice + ((jjdt.customizeGuaPaiPrice=='' && ("面议"!=jjdt.guapaiprice) && ("-"!=jjdt.guapaiprice)) ? "元" : "") + jjdt.priceSuffix + "</td>";
+                            if ("1"==jjdt.hasbid) {
+                                html += "<td>" + jjdt.maxPrice + "元</td>";
+                            } else {
+                                html += "<td> - </td>";
+                            }
+                            var code= jjdt.code+"";
+                            var urlParms = "";
+                            var parms = "";
+                            if ("QC_ZCCZ"==jjdt.SystemType) {
+                                urlParms = "&systemType=QC_ZCCZ";
+                                parms="QC_ZCCZ";
+                            }
+                            if(code=="报名中竞价中"){
+                                html +="<td>报名中</td>";
+                            }else if(code=="已成交"){
+                                html +="<td>成交</td>";
+                            }else{
+                                html +="<td>"+code+"</td>";
+                            }
+
+                            html +="<td nowarp>";
+                            var infoid= jjdt.infoid;
+                            var jmjlStr = "<button class=\"new-jygg-btn\" style=\"vertical-align: top;\" onclick=\"jmjl('" + jjdt.projectGuid + "','" + jjdt.JingJiaFangShi + "','" + jjdt.ProjectStatus + "','" + jjdt.currencyunit + "')\">竞价详情</button>";
+                            if(code=="报名中竞价中" || code=="报名中") {
+                                var systemtype = "NMG";
+                                if("QC_ZCCZ"==jjdt.SystemType){
+                                    systemtype = "QC_ZCCZ";
+                                }
+                                var bmStr = '';
+                                if ('QC_ZCCZ' != '1') {
+                                    bmStr = "<button class=\"new-jygg-btn ejy_huiyuan_bm\" style=\"vertical-align: top;\" id=\"" + jjdt.projectNo + "\" skipType=\"baoming\" data-projectguid='" + jjdt.projectGuid + "' data-zhuanTingGuid='" + zhuanTingGuid + "' data-systemtype='" + systemtype + "' callback=\"baoming('" + jjdt.projectGuid + "','" + zhuanTingGuid + "','" + systemtype + "')\">报名交保证金</button>";
+                                }
+                                html +=jmjlStr+bmStr;
+                            } else if (code == "已成交") {
+
+                                html += jmjlStr + "<button class=\"new-jygg-btn\" style=\"vertical-align: top;\" onclick=\"cjggdetail('" + infoid + "','" + parms + "','0','" + jjdt.projectGuid + "')\">成交公告</button>";
+                            } else if (code == "终结") {
+                                html += jmjlStr + "<button class=\"new-jygg-btn\" style=\"vertical-align: top;\" onclick=\"cjggdetail('" + infoid + "','" + parms + "','0','" + jjdt.projectGuid + "')\">成交公告</button>";
+                            } else if (code == "中止") {
+                                html += jmjlStr + "<button class=\"new-jygg-btn\" style=\"vertical-align: top;\" onclick=\"cjggdetail('" + infoid + "','" + parms + "','2','" + jjdt.projectGuid + "')\">中止公告</button>";
+                            } else {
+                                html += jmjlStr;
+                            }
+
+                            var ypInfoId= jjdt.ypInfoId;
+                            var hyInfoId= jjdt.hyInfoId;
+                            var zzInfoId= jjdt.zzInfoId;
+                            var zjInfoId= jjdt.zjInfoId;
+                            if(jjdt.ypInfoId!=null && ""!=ypInfoId){
+                                html +="<a class='new-jygg-btn' href='newsinfo?flag=gonggao&infoid="+ypInfoId+urlParms+"&ggtype=yp' target='_blank'>延牌公告</a>";
+                            }
+                            if(jjdt.zzInfoId!=null && ""!=zzInfoId){
+                                html +="<a class='new-jygg-btn' href='newsinfo?flag=gonggao&infoid="+zzInfoId+urlParms+"&ggtype=2' target='_blank'>中止公告</a>";
+                            }
+                            if(jjdt.hyInfoId!=null && ""!=hyInfoId){
+                                html +="<a class='new-jygg-btn' href='newsinfo?flag=gonggao&infoid="+hyInfoId+urlParms+"&ggtype=3' target='_blank'>还原公告</a>";
+                            }
+                            if(jjdt.zjInfoId!=null && ""!=zjInfoId){
+                                html +="<button class=\"new-jygg-btn\" style=\"vertical-align: top;\" onclick=\"cjggdetail('"+infoid+"','"+parms+"','1','"+jjdt.projectGuid+"')\">终结公告</button>";
+                            }
+                            html +="</td>";
+                            html +="</tr>";
+                        }
+                        $('#jygg_news_detail_table tbody').append(html);
+                        if(data.hasNext){
+                            $('#bdTab').append("<div class=\"listshowmore clearfix\" id=\"showmore\"><button  onclick=\"showmore('"+ data.page +"')\">显示更多</button></div>");
+
+                        }
+                    }
+                }
+            });
+
+        }
+    </script>
+    <style type="text/css">
+        .tr1{text-align: center;}
+        .orange{text-align: center;color: orange;height:30px;padding: 2px;font-size: 14px;border-bottom: solid 1px #ccc;}
+        .biaodilist{border-left: 1px #ddd solid;border-top: 1px #ddd solid;}
+        .biaodilist tr th{border-right: 1px #ddd solid;border-bottom: 1px #ddd solid;background: #f1f1f1; height: 40px;color: #333;}
+        .biaodilist tr td{border-right: 1px #ddd solid;border-bottom: 1px #ddd solid;text-align: center;}
+        .biaodilist tr td:first-child{text-align: left;}
+    </style>
+</head>
+
+<body>
+
+<div class="pd5">
+    <div class="clearfix" id="bdTab">
+        <table id="jygg_news_detail_table" width="100%" class="biaodilist" style="display: none">
+            <tr>
+                <th >标的名称</th>
+                <th width="100">标的编号</th>
+                <th align="center" width="90">报名开始时间</th>
+                <th  width="90">报名截止时间</th>
+                <th width="90">保证金</th>
+                <th width="100">挂牌价</th>
+                <th width="100">当前价</th>
+                    
+                <th width="70">状态</th>
+                <th width="80">操作</th>
+            </tr>
+        <tr class="jygg_news_detail_tr">
+<td>苏州市虎丘区横塘镇国际教育园北区学府路287号苏州经贸职业技术学院北区1号商铺</td>
+<td>N0117FCZZ250441</td>
+<td>2025-03-11 09:00:00</td>
+<td>2025-03-24 17:00:00</td>
+<td>500000元</td>
+<td>68671.8元</td>
+<td> - </td>
+<td>成交</td>
+<td nowarp>
+<button class="new-jygg-btn" style="vertical-align: top;" onclick="jmjl('N0117FCZZ250441','','','')">竞价详情</button><button class="new-jygg-btn" style="vertical-align: top;" onclick="cjggdetail('N0117FCZZ250441','QC_ZCCZ','0','N0117FCZZ250441')">成交公告</button>
+</td>
+</tr>
+<tr class="jygg_news_detail_tr">
+<td>苏州市虎丘区横塘镇国际教育园北区学府路287号苏州经贸职业技术学院北区2号商铺</td>
+<td>N0117FCZZ250442</td>
+<td>2025-03-11 09:00:00</td>
+<td>2025-03-31 17:00:00</td>
+<td>500000元</td>
+<td>34759.8元</td>
+<td> - </td>
+<td>成交</td>
+<td nowarp>
+<button class="new-jygg-btn" style="vertical-align: top;" onclick="jmjl('N0117FCZZ250442','','','')">竞价详情</button><button class="new-jygg-btn" style="vertical-align: top;" onclick="cjggdetail('N0117FCZZ250442','QC_ZCCZ','0','N0117FCZZ250442')">成交公告</button>
+</td>
+</tr>
+<tr class="jygg_news_detail_tr">
+<td>苏州市虎丘区横塘镇国际教育园北区学府路287号苏州经贸职业技术学院北区3号商铺</td>
+<td>N0117FCZZ250443</td>
+<td>2025-03-11 09:00:00</td>
+<td>2025-03-24 17:00:00</td>
+<td>500000元</td>
+<td>33912元</td>
+<td> - </td>
+<td>成交</td>
+<td nowarp>
+<button class="new-jygg-btn" style="vertical-align: top;" onclick="jmjl('N0117FCZZ250443','','','')">竞价详情</button><button class="new-jygg-btn" style="vertical-align: top;" onclick="cjggdetail('N0117FCZZ250443','QC_ZCCZ','0','N0117FCZZ250443')">成交公告</button>
+</td>
+</tr>
+<tr class="jygg_news_detail_tr">
+<td>苏州市虎丘区横塘镇国际教育园北区学府路287号苏州经贸职业技术学院北区4号商铺</td>
+<td>N0117FCZZ250444</td>
+<td>2025-03-11 09:00:00</td>
+<td>2025-03-24 17:00:00</td>
+<td>500000元</td>
+<td>39846.6元</td>
+<td> - </td>
+<td>成交</td>
+<td nowarp>
+<button class="new-jygg-btn" style="vertical-align: top;" onclick="jmjl('N0117FCZZ250444','','','')">竞价详情</button><button class="new-jygg-btn" style="vertical-align: top;" onclick="cjggdetail('N0117FCZZ250444','QC_ZCCZ','0','N0117FCZZ250444')">成交公告</button>
+</td>
+</tr>
+<tr class="jygg_news_detail_tr">
+<td>苏州市虎丘区横塘镇国际教育园北区学府路287号苏州经贸职业技术学院北区5号商铺</td>
+<td>N0117FCZZ250445</td>
+<td>2025-03-11 09:00:00</td>
+<td>2025-04-08 17:00:00</td>
+<td>500000元</td>
+<td>35080.08元</td>
+<td> - </td>
+<td>成交</td>
+<td nowarp>
+<button class="new-jygg-btn" style="vertical-align: top;" onclick="jmjl('N0117FCZZ250445','','','')">竞价详情</button><button class="new-jygg-btn" style="vertical-align: top;" onclick="cjggdetail('N0117FCZZ250445','QC_ZCCZ','0','N0117FCZZ250445')">成交公告</button>
+</td>
+</tr>
+<tr class="jygg_news_detail_tr">
+<td>苏州市虎丘区横塘镇国际教育园北区学府路287号苏州经贸职业技术学院北区6号商铺</td>
+<td>N0117FCZZ250446</td>
+<td>2025-03-11 09:00:00</td>
+<td>2025-03-24 17:00:00</td>
+<td>500000元</td>
+<td>53317.2元</td>
+<td> - </td>
+<td>成交</td>
+<td nowarp>
+<button class="new-jygg-btn" style="vertical-align: top;" onclick="jmjl('N0117FCZZ250446','','','')">竞价详情</button><button class="new-jygg-btn" style="vertical-align: top;" onclick="cjggdetail('N0117FCZZ250446','QC_ZCCZ','0','N0117FCZZ250446')">成交公告</button>
+</td>
+</tr>
+<tr class="jygg_news_detail_tr">
+<td>苏州市虎丘区横塘镇国际教育园北区学府路287号苏州经贸职业技术学院北区7号商铺</td>
+<td>N0117FCZZ250447</td>
+<td>2025-03-11 09:00:00</td>
+<td>2025-03-24 17:00:00</td>
+<td>500000元</td>
+<td>117712.32元</td>
+<td> - </td>
+<td>成交</td>
+<td nowarp>
+<button class="new-jygg-btn" style="vertical-align: top;" onclick="jmjl('N0117FCZZ250447','','','')">竞价详情</button><button class="new-jygg-btn" style="vertical-align: top;" onclick="cjggdetail('N0117FCZZ250447','QC_ZCCZ','0','N0117FCZZ250447')">成交公告</button>
+</td>
+</tr>
+<tr class="jygg_news_detail_tr">
+<td>苏州市虎丘区横塘镇国际教育园北区学府路287号苏州经贸职业技术学院北区8号商铺</td>
+<td>N0117FCZZ250448</td>
+<td>2025-03-11 09:00:00</td>
+<td>2025-03-24 17:00:00</td>
+<td>500000元</td>
+<td>134461.08元</td>
+<td> - </td>
+<td>成交</td>
+<td nowarp>
+<button class="new-jygg-btn" style="vertical-align: top;" onclick="jmjl('N0117FCZZ250448','','','')">竞价详情</button><button class="new-jygg-btn" style="vertical-align: top;" onclick="cjggdetail('N0117FCZZ250448','QC_ZCCZ','0','N0117FCZZ250448')">成交公告</button>
+</td>
+</tr>
+<tr class="jygg_news_detail_tr">
+<td>苏州市虎丘区横塘镇国际教育园北区学府路287号苏州经贸职业技术学院北区9号商铺</td>
+<td>N0117FCZZ250449</td>
+<td>2025-03-11 09:00:00</td>
+<td>2025-03-24 17:00:00</td>
+<td>500000元</td>
+<td>-</td>
+<td>810202元</td>
+<td>成交</td>
+<td nowarp>
+<button class="new-jygg-btn" style="vertical-align: top;" onclick="jmjl('N0117FCZZ250449','3','3','1')">竞价详情</button><button class="new-jygg-btn" style="vertical-align: top;" onclick="cjggdetail('N0117FCZZ250449','QC_ZCCZ','0','N0117FCZZ250449')">成交公告</button>
+</td>
+</tr>
+
+    </table>
+        
+   </div>
+</div>
+
+
+<div id="jmjl" style=" overflow:hidden; display: none;">
+
+</div>
+
+<div id="cjggdetail" class="base-container clearfix"  style=" overflow:hidden; display: none;">
+    <div class="clearfix">
+        <div style="text-align: left;width: 100%;    padding: 10px;">
+            <button style="cursor: pointer; height: 30px; border: none; background-color: orange; padding: 0px 10px; color: #fff;" onclick="backobjects()">返回标的列表</button>
+        </div>
+        <div class="detail-box">
+            <div class="box">
+                <h1 style="text-align: center"></h1>
+                <div class="clearfix pb20"></div>
+                <div class="time" style="text-align: center">
+                    发布时间 &nbsp;&nbsp;&nbsp;次阅读
+                    &nbsp;&nbsp;&nbsp;<a target="_blank" href="https://www.ejy365.com/" class="time logourl">e交易平台</a>
+                </div>
+                <div class="box">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear pb15"></div>
+</div>
+</div>
+
+
+
+
+<!-- E交易快捷报名 -->
+<div id="ejy_huiyuan_baoming">
+    <div class="theme-popover">
+        <div class="theme-poptit">
+            <a href="javascript:;" title="关闭" class="close">×</a>
+            E交易竞买人会员登录
+        </div>
+        <div class="theme-popbod dform">
+            <form class="theme-signin" name="loginform" action="" method="post">
+                <input type="hidden" name="projectNo"/>
+                <input type="hidden" name="skipType"/>
+                <input type="hidden" name="callback"/>
+                <p><strong>会员：</strong><input class="ipt" type="text" name="username" size="20"/></p>
+                <p><strong>密码：</strong><input class="ipt" type="password" name="password" size="20"/></p>
+                <p style="text-align:center;">
+                    <a class="ejy_huiyuan_baoming_btn ejy_huiyuan_dl">登 录</a>
+                    <a class="ejy_huiyuan_baoming_btn" target="_blank" style="background-color:#fea63a;border:#fea63a"
+                       href="register">我要注册</a>
+                </p>
+            </form>
+            <font id="error" style="font-size: 12px;color: red;"></font>
+        </div>
+    </div>
+    <div class="theme-popover-mask"></div>
+</div>
+</body>
+</html>

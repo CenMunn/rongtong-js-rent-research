@@ -1,0 +1,17 @@
+{
+  "source": {
+    "encoding": "utf-8",
+    "sha": "6d3f12e097eb32f08b10e475e697fd9b3b9eb1fc",
+    "display_url": "https://github.com/CenMunn/rongtong-js-rent-research/blob/main/%E5%85%B1%E4%BA%AB%E8%B5%84%E6%96%99/%E5%8D%97%E4%BA%AC%E8%8B%8F%E5%B7%9E%E4%BA%A4%E6%98%93%E6%98%8E%E7%BB%86.csv",
+    "display_title": "南京苏州交易明细.csv"
+  },
+  "template": {
+    "encoding": "utf-8",
+    "sha": "916f51f1f45c587500d617d23890de0e8809e1d0",
+    "display_url": "https://github.com/CenMunn/rongtong-js-rent-research/blob/main/%E5%85%B1%E4%BA%AB%E8%B5%84%E6%96%99/%E7%BB%9F%E4%B8%80%E9%87%87%E9%9B%86%E7%A9%BA%E8%A1%A8.csv",
+    "display_title": "统一采集空表.csv"
+  },
+  "retrieved_date": "2026-11-08",
+  "repository_ref": "5e4d72b000b8241f74ec7c0bb84108ac141cfc71",
+  "byte_verification": "原文件UTF-8字节已按Git blob SHA1核对一致"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "NJ_zhongshan_result",
+  "url": "https://jsggzy.jszwfw.gov.cn/jyxx/003006/003006004/20251117/N0117FCZZ250804-4.html",
+  "fetched_at": "2026-11-08T23:30:24.117511+08:00",
+  "method": "urllib HTTP GET",
+  "status": 200,
+  "final_url": "https://jsggzy.jszwfw.gov.cn/jyxx/003006/003006004/20251117/N0117FCZZ250804-4.html",
+  "content_type": "text/html; charset=utf-8",
+  "sha256": "bf6c6687d66f719474e41dcd0045bd9adef8293c8c857ff9fc5d306a7a730a4a",
+  "bytes": 9900,
+  "saved_file": "证据/NJ_zhongshan_result.html",
+  "text_file": "证据/NJ_zhongshan_result.txt",
+  "links": [
+    {
+      "text": "首页",
+      "url": "https://jsggzy.jszwfw.gov.cn/"
+    },
+    {
+      "text": "交易信息",
+      "url": "javascript:void(0);"
+    },
+    {
+      "text": "国有产权",
+      "url": "javascript:void(0);"
+    },
+    {
+      "text": "成交公示",
+      "url": "javascript:void(0);"
+    },
+    {
+      "text": "首页",
+      "url": "https://jsggzy.jszwfw.gov.cn/"
+    },
+    {
+      "text": "交易信息",
+      "url": "javascript:void(0);"
+    },
+    {
+      "text": "国有产权",
+      "url": "javascript:void(0);"
+    },
+    {
+      "text": "003006004",
+      "url": "javascript:void(0);"
+    },
+    {
+      "text": "【我要打印】",
+      "url": "javascript:window.print();"
+    },
+    {
+      "text": "【关闭】",
+      "url": "javascript:window.close();"
+    },
+    {
+      "text": "原文链接",
+      "url": "javascript:void(0);"
+    }
+  ],
+  "images": [
+    "https://jsggzy.jszwfw.gov.cn/images/detailbszn.png",
+    "https://jsggzy.jszwfw.gov.cn/images/detailwytb.png"
+  ]
+}
