@@ -1,0 +1,20 @@
+test_annual_total (test_check_data.Checks.test_annual_total) ... ok
+test_deposit_cannot_be_rent (test_check_data.Checks.test_deposit_cannot_be_rent) ... ok
+test_direct_unit_without_area (test_check_data.Checks.test_direct_unit_without_area) ... ok
+test_disclosed_rent_and_adjusted_rent_types (test_check_data.Checks.test_disclosed_rent_and_adjusted_rent_types) ... ok
+test_duplicate_observations (test_check_data.Checks.test_duplicate_observations) ... ok
+test_filled_reviews_protected (test_check_data.Checks.test_filled_reviews_protected) ... ok
+test_missing_column_is_file_error (test_check_data.Checks.test_missing_column_is_file_error) ... ok
+test_month_total (test_check_data.Checks.test_month_total) ... ok
+test_multiple_periods_preserved (test_check_data.Checks.test_multiple_periods_preserved) ... ok
+test_no_price_and_zero_building (test_check_data.Checks.test_no_price_and_zero_building) ... ok
+test_room_price_is_not_area_price (test_check_data.Checks.test_room_price_is_not_area_price) ... ok
+test_wrong_area (test_check_data.Checks.test_wrong_area) ... ok
+test_wrong_arithmetic (test_check_data.Checks.test_wrong_arithmetic) ... ok
+test_wrong_source_numerator (test_check_data.Checks.test_wrong_source_numerator) ... ok
+test_zero_denominator (test_check_data.Checks.test_zero_denominator) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.330s
+
+OK
