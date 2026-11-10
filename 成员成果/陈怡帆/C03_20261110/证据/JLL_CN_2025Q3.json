@@ -1,0 +1,16 @@
+{
+  "request_url": "https://www.jll.cn/zh-cn/insights/market-perspectives/china-office",
+  "accessed": "2026-11-10T22:04:40.329105+08:00",
+  "http_status": 200,
+  "final_url": "https://www.jll.cn/zh-cn/insights/market-perspectives/china-office",
+  "content_type": "text/html;charset=utf-8",
+  "download_links": [
+    {
+      "text": "点击此处下载报告",
+      "url": "https://app.jingsocial.com/mF/cms/none/gC2YAuztZBYWxJf7AEWJdN/rfaffGBXToenPCJbZxgBfW1"
+    }
+  ],
+  "file": "JLL_CN_2025Q3.html",
+  "sha256": "2f8181695e327adf6435502cc15cfbd4518af85d67c1b65d8016d2ac993a2631",
+  "bytes": 346125
+}

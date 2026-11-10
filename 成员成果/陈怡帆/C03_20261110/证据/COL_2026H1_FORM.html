@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+  <head><title></title><meta name="ROBOTS" content="INDEX,FOLLOW"><meta name="keywords" content=""><meta name="description" content="">
+    <link rel="shortcut icon" href="https://image.realestate.colliers.com/lib/fe3111737164047e751279/m/1/faviconpng.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <style class="main_style">
+      .layout-canvas-g {
+        background-color: #fff;
+        border: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        box-shadow: 0 4px 8px 0 rgb(53 105 128 / 30%), 0 6px 20px 0 rgb(165 200 213 / 41%);
+        padding: 40px;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .layout-canvas-g > .header,
+      .layout-canvas-g > .section,
+      .layout-canvas-g > .footer {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        word-wrap: break-word;
+      }
+      .layout-canvas-g > .section {
+        margin: 10px 0;
+      }
+      .layout-canvas-g > .section > .columns {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        word-wrap: break-word;
+      }
+      body {
+        background-color: #f4f8fa;
+        color: #000;
+        font-family: Arial;
+        font-size: 12px;
+        margin: 0 auto;
+        /*  max-width: 1280px; */
+        padding-top: 30px;
+      }
+      
+      form label {
+    display: block;
+    color: #25408f !important;
+    font-size: 13px !important;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 4px !important; }
+      
+      .fuelux .popover .popover-content {
+    color: red!important;
+    text-align: right !important;
+    text-transform: uppercase !important;
+    }
+      
+      @media only screen and (max-width: 480px) {
+        .mobile-hidden {
+          display: none !important;
+        }
+        .responsive-td {
+          width: 100% !important;
+          display: block !important;
+          padding: 0 !important;
+        }
+      }
+      .layout-canvas-g > .section > .columns {
+        width: 100%;
+      }
+      
+      /* Preview Editor styles */
+.editor-gears-content {
+  /* form styles */ }
+  .editor-gears-content .hidden {
+    display: none !important; }
+  .editor-gears-content .smartcapture-controls {
+    padding: 1em 0; }
+  .editor-gears-content .smartcapture-controls > .sc-formfield-label,
+  .editor-gears-content .sc-formfield-input label {
+    display: block;
+    color: #25408f;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 4px; }
+  .editor-gears-content .sc-formfield-input input[type="text"],
+  .editor-gears-content .sc-formfield-input input[type="number"],
+  .editor-gears-content .sc-formfield-input input[type="email"],
+  .editor-gears-content .sc-formfield-input select {
+    display: block;
+    width: 100% !important;
+    height: 40px;
+    padding: 9px 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #33475b;
+    background-color: #f5f8fa;
+    border: 1px solid #cbd6e2;
+    box-sizing: border-box;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px; }
+  .editor-gears-content .sc-formfield-input.date-dropdown-select-boxes select {
+    display: inline-block;
+    width: auto;
+    height: 40px;
+    padding: 9px 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #33475b;
+    background-color: #f5f8fa;
+    border: 1px solid #cbd6e2;
+    box-sizing: border-box;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px; }
+  .editor-gears-content button[type="submit"] {
+    background: #25408f !important;
+    border: none;
+    border-radius: 3px;
+    color: #faf8f8;
+    cursor: pointer;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    line-height: 12px;
+    font-size: 12px;
+    padding: 12px 24px; }
+    </style>
+    <!-- Common Form Styles -->
+    <link rel="stylesheet" href="https://cloud.realestate.colliers.com/common-form-styles">
+  </head>
+  <body>
+    <div class="layout layout-canvas-g">
+        <div class="section">
+          <div class="columns col1">
+            <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 100%; padding-bottom: 3px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="left"><img data-assetid="14930" src="https://image.realestate.colliers.com/lib/fe3b117371640479711470/m/1/129f1df8-545c-44c1-8340-244e908a8cc1.png" alt="" height="83" width="150" style="display: block; padding: 0px; text-align: left; height: 83px; width: 150px; border: 0px;"></td></tr></table></td></tr></table></td></tr></table></td></tr><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 100%; padding-top: 3px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><h1 style="">
+	<span style="color: #25408f;font-size:24px;">研究报告</span><br>
+	<span style="color: #25408f;font-size:13px;">Research Report</span></h1><h2 style="color: #25408f; font-size: 21px; font-weight: normal;">
+	<span style="font-size:13px;">填写并提交表格后，即可下载研究报告<br>
+	You can download the report after submitting the form</span></h2></td></tr></table></td></tr></table></td></tr></table></td></tr></table>
+            <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" class="stylingblock-content-wrapper" style="min-width: 100%; "><tr><td class="stylingblock-content-wrapper camarker-inner">
+<form id="smartcapture-block-4s1l7cinojk" class="smartcapture-content-wrapper fuelux" novalidate="novalidate">
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+<style id="smartcapture-styles-4s1l7cinojk">
+	#smartcapture-block-4s1l7cinojk {
+		background-color:transparent;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;text-align:left;
+	}
+
+	#smartcapture-block-4s1l7cinojk .smartcapture-controls {
+		padding-bottom: 10px;
+	}
+
+	#smartcapture-block-4s1l7cinojk .smartcapture-controls .sc-formfield-label,
+	#smartcapture-block-4s1l7cinojk .smartcapture-controls .sc-formfield-label label,
+	#smartcapture-block-4s1l7cinojk .smartcapture-controls .sc-formfield-input label {
+		color:#000000;font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:inherit;margin-bottom:3px;vertical-align:middle;
+	}
+
+	#smartcapture-block-4s1l7cinojk input[type="radio"],
+	#smartcapture-block-4s1l7cinojk input[type="checkbox"] {
+		margin: 0 0.4em 3px 0;
+		vertical-align: middle;
+	}
+
+	#smartcapture-block-4s1l7cinojk input[type="text"],
+	#smartcapture-block-4s1l7cinojk input[type="email"],
+	#smartcapture-block-4s1l7cinojk input[type="number"] {
+		width:200px;
+	}
+
+	#smartcapture-block-4s1l7cinojk .sc-button {
+		background-color:#009DDC;border-color:#009DDC;border-radius:3px;border-style:solid;-webkit-border-radius:3px;-moz-border-radius:3px;color:#FFFFFF;font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:normal;padding:10px;
+	}
+
+	#smartcapture-block-4s1l7cinojk .smartcapture-submit-button-wrapper {
+		padding-bottom:10px;text-align:center;
+	}
+
+	#smartcapture-block-4s1l7cinojk .date-dropdown-select-boxes input {
+		display: none;
+	}
+
+	#smartcapture-block-4s1l7cinojk .date-dropdown-select-boxes .select {
+		max-height: 28em;
+		max-width: 6em;
+		overflow: auto;
+	}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div class="smartcapture-controls"><div class="sc-formfield-label"><label for="Company">公司名称 Company Name *</label></div>
+<div class="sc-formfield-input"><input type="text" name="Company" data-field-type="Text" required="required" data-validation-message="请填写公司名称。Please fill out this field."></div>
+</div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div class="smartcapture-controls"><div class="sc-formfield-label"><label for="BusiniessOwnership">企业类型 Business Ownership</label></div>
+<div class="sc-formfield-input">
+	<select name="BusiniessOwnership" id="BusiniessOwnership" data-field-type="Text">
+		<option value="" id="" selected="selected"></option>
+
+		<option value="国有企业（含政府、事业单位及科研院所）SOEs" id="国有企业（含政府、事业单位及科研院所）SOEs">国有企业（含政府、事业单位及科研院所）SOEs</option>
+
+		<option value="外资企业（除港澳台企业）Foreign-funded" id="外资企业（除港澳台企业）Foreign-funded">外资企业（除港澳台企业）Foreign-funded</option>
+
+		<option value="民营企业 Private Enterprises" id="民营企业 Private Enterprises">民营企业 Private Enterprises</option>
+
+		<option value="中外合资企业 Joint Ventures" id="中外合资企业 Joint Ventures">中外合资企业 Joint Ventures</option>
+
+		<option value="大型混合所有制企业 Stock-holding" id="大型混合所有制企业 Stock-holding">大型混合所有制企业 Stock-holding</option>
+
+		<option value="港澳台企业 Hong Kong, Macao and Taiwan Enterprises" id="港澳台企业 Hong Kong, Macao and Taiwan Enterprises">港澳台企业 Hong Kong, Macao and Taiwan Enterprises</option>
+
+	</select>
+</div>
+</div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div class="smartcapture-controls"><div class="sc-formfield-label"><label for="LastName">姓 Last Name *</label></div>
+<div class="sc-formfield-input"><input type="text" name="LastName" data-field-type="Text" required="required" data-validation-message="请填写姓。Please fill out this field."></div>
+</div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div class="smartcapture-controls"><div class="sc-formfield-label"><label for="FirstName">名 First Name *</label></div>
+<div class="sc-formfield-input"><input type="text" name="FirstName" data-field-type="Text" required="required" data-validation-message="请填写名。Please fill out this field."></div>
+</div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div class="smartcapture-controls"><div class="sc-formfield-label"><label for="JobTitle">职位 Job title</label></div>
+<div class="sc-formfield-input"><input type="text" name="JobTitle" data-field-type="Text"></div>
+</div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div class="smartcapture-controls"><div class="sc-formfield-label"><label for="PhoneNumber">手机号 Mobile Number *</label></div>
+<div class="sc-formfield-input"><input type="text" name="PhoneNumber" data-field-type="Phone" required="required" data-validation-message="请填写手机号。Please fill out this field."></div>
+</div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div class="smartcapture-controls"><div class="sc-formfield-label"><label for="Email">邮箱 Email Address *</label></div>
+<div class="sc-formfield-input"><input type="email" id="Email" name="Email" data-field-type="EmailAddress" data-validation="email" required="required" data-validation-message="Please enter an email address."></div>
+</div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div class="smartcapture-controls"><div class="sc-formfield-label"><label for="Province">所在省市 Province</label></div>
+<div class="sc-formfield-input">
+	<select name="Province" id="Province" data-field-type="Text">
+		<option value="" id="" selected="selected"></option>
+
+		<option value="北京市 Beijing" id="北京市 Beijing">北京市 Beijing</option>
+
+		<option value="上海市 Shanghai" id="上海市 Shanghai">上海市 Shanghai</option>
+
+		<option value="天津市 Tianjing" id="天津市 Tianjing">天津市 Tianjing</option>
+
+		<option value="重庆市 Chongqing" id="重庆市 Chongqing">重庆市 Chongqing</option>
+
+		<option value="安徽省 Anhui" id="安徽省 Anhui">安徽省 Anhui</option>
+
+		<option value="福建省 Fujian" id="福建省 Fujian">福建省 Fujian</option>
+
+		<option value="甘肃省 Gansu" id="甘肃省 Gansu">甘肃省 Gansu</option>
+
+		<option value="广东省 Guangdong" id="广东省 Guangdong">广东省 Guangdong</option>
+
+		<option value="贵州省 Guizhou" id="贵州省 Guizhou">贵州省 Guizhou</option>
+
+		<option value="海南省 Hainan" id="海南省 Hainan">海南省 Hainan</option>
+
+		<option value="河北省 Hebei" id="河北省 Hebei">河北省 Hebei</option>
+
+		<option value="河南省 Henan" id="河南省 Henan">河南省 Henan</option>
+
+		<option value="黑龙江省 Heilongjiang" id="黑龙江省 Heilongjiang">黑龙江省 Heilongjiang</option>
+
+		<option value="湖北省 Hubei" id="湖北省 Hubei">湖北省 Hubei</option>
+
+		<option value="湖南省 Hunan" id="湖南省 Hunan">湖南省 Hunan</option>
+
+		<option value="吉林省 Jilin" id="吉林省 Jilin">吉林省 Jilin</option>
+
+		<option value="江苏省 Jiangsu" id="江苏省 Jiangsu">江苏省 Jiangsu</option>
+
+		<option value="江西省 Jiangxi" id="江西省 Jiangxi">江西省 Jiangxi</option>
+
+		<option value="辽宁省 Liaoning" id="辽宁省 Liaoning">辽宁省 Liaoning</option>
+
+		<option value="青海省 Qinghai" id="青海省 Qinghai">青海省 Qinghai</option>
+
+		<option value="山东省 Shandong" id="山东省 Shandong">山东省 Shandong</option>
+
+		<option value="山西省 Shanxi" id="山西省 Shanxi">山西省 Shanxi</option>
+
+		<option value="陕西省 Shaanxi" id="陕西省 Shaanxi">陕西省 Shaanxi</option>
+
+		<option value="四川省 Sichuan" id="四川省 Sichuan">四川省 Sichuan</option>
+
+		<option value="云南省 Yunnan" id="云南省 Yunnan">云南省 Yunnan</option>
+
+		<option value="浙江省 Zhejiang" id="浙江省 Zhejiang">浙江省 Zhejiang</option>
+
+		<option value="台湾省 Taiwan" id="台湾省 Taiwan">台湾省 Taiwan</option>
+
+		<option value="广西壮族自治区 Guangxi" id="广西壮族自治区 Guangxi">广西壮族自治区 Guangxi</option>
+
+		<option value="内蒙古自治区 Inner Mongoria" id="内蒙古自治区 Inner Mongoria">内蒙古自治区 Inner Mongoria</option>
+
+		<option value="宁夏回族自治区 Ningxia" id="宁夏回族自治区 Ningxia">宁夏回族自治区 Ningxia</option>
+
+		<option value="新疆维吾尔自治区 Xinjiang" id="新疆维吾尔自治区 Xinjiang">新疆维吾尔自治区 Xinjiang</option>
+
+		<option value="西藏自治区 Tibet" id="西藏自治区 Tibet">西藏自治区 Tibet</option>
+
+		<option value="香港特别行政区 Hong Kong" id="香港特别行政区 Hong Kong">香港特别行政区 Hong Kong</option>
+
+		<option value="澳门特别行政区 Macao" id="澳门特别行政区 Macao">澳门特别行政区 Macao</option>
+
+		<option value="其他海外地区 Other overseas regions" id="其他海外地区 Other overseas regions">其他海外地区 Other overseas regions</option>
+
+	</select>
+</div>
+</div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div class="smartcapture-controls"><div class="sc-formfield-label">您感兴趣的业务 Which business do you interested in</div>
+<div class="sc-formfield-input-wrapper">
+
+	<div class="sc-formfield-input"><label><input type="checkbox" name="InterestedIn" id="InterestedIn" data-field-type="Text" value="咨询顾问服务 Advisory Services">&nbsp;咨询顾问服务 Advisory Services</label></div>
+
+	<div class="sc-formfield-input"><label><input type="checkbox" name="InterestedIn" id="InterestedIn" data-field-type="Text" value="大宗交易 Capital Markets &amp; Investment Services">&nbsp;大宗交易 Capital Markets & Investment Services</label></div>
+
+	<div class="sc-formfield-input"><label><input type="checkbox" name="InterestedIn" id="InterestedIn" data-field-type="Text" value="文旅商业和消费运营服务 Cultural &amp; Leisure Operations">&nbsp;文旅商业和消费运营服务 Cultural & Leisure Operations</label></div>
+
+	<div class="sc-formfield-input"><label><input type="checkbox" name="InterestedIn" id="InterestedIn" data-field-type="Text" value="产业和工业地产服务 Industrial Services">&nbsp;产业和工业地产服务 Industrial Services</label></div>
+
+	<div class="sc-formfield-input"><label><input type="checkbox" name="InterestedIn" id="InterestedIn" data-field-type="Text" value="办公楼出租（业主） Office Services-Landlord Representation">&nbsp;办公楼出租（业主） Office Services-Landlord Representation</label></div>
+
+	<div class="sc-formfield-input"><label><input type="checkbox" name="InterestedIn" id="InterestedIn" data-field-type="Text" value="办公楼租赁（租客） Office Services-Tenant Representation">&nbsp;办公楼租赁（租客） Office Services-Tenant Representation</label></div>
+
+	<div class="sc-formfield-input"><label><input type="checkbox" name="InterestedIn" id="InterestedIn" data-field-type="Text" value="工程项目管理 Project Management">&nbsp;工程项目管理 Project Management</label></div>
+
+	<div class="sc-formfield-input"><label><input type="checkbox" name="InterestedIn" id="InterestedIn" data-field-type="Text" value="物业和资产管理 Real Estate Management Services">&nbsp;物业和资产管理 Real Estate Management Services</label></div>
+
+	<div class="sc-formfield-input"><label><input type="checkbox" name="InterestedIn" id="InterestedIn" data-field-type="Text" value="商业/零售房地产服务 Retail Services">&nbsp;商业/零售房地产服务 Retail Services</label></div>
+
+	<div class="sc-formfield-input"><label><input type="checkbox" name="InterestedIn" id="InterestedIn" data-field-type="Text" value="资产/物业评估和咨询 Valuation &amp; Advisory Services">&nbsp;资产/物业评估和咨询 Valuation & Advisory Services</label></div>
+
+	<div class="sc-formfield-input"><label><input type="checkbox" name="InterestedIn" id="InterestedIn" data-field-type="Text" value="其他业务咨询 Others enquiry">&nbsp;其他业务咨询 Others enquiry</label></div>
+
+</div>
+</div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div class="smartcapture-controls"><div class="sc-formfield-label"></div>
+<div class="sc-formfield-input-wrapper">
+
+	<div class="sc-formfield-input"><label><input type="checkbox" name="EmailOptIn" data-field-type="Boolean">&nbsp;我理解并同意，高力国际可能会偶尔通过电子邮件向我发送营销推广及最新消息。I understand and agree that Colliers may occasionally send me marketing offers and updates by email.</label></div>
+
+</div>
+</div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div class="smartcapture-controls"><div class="sc-formfield-label"></div>
+<div class="sc-formfield-input-wrapper">
+
+	<div class="sc-formfield-input"><label><input type="checkbox" name="MobileOptIn" data-field-type="Boolean" required="required" data-validation-message="请勾选同意。Please fill out this field.">&nbsp;我理解并同意，如果我提交了我的电话号码，高力国际将保存并使用我的联络资料，以便通过电子邮件或电话回应我的联络要求。I understand and agree that my contact details will be saved and used by Colliers to respond to my contact request by email or by phone if I submitted my phone number. *</label></div>
+
+</div>
+</div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div class="smartcapture-controls"><div class="sc-formfield-label"></div>
+<div class="sc-formfield-input-wrapper">
+
+ <div class="sc-formfield-input"><label><input type="checkbox" name="PrivacyPolicy" data-field-type="Boolean" required="required" data-validation-message="请勾选同意。Please fill out this field.">&nbsp;高力国际通过获取您的联系信息，从而更好地向您提供我们的产品和服务。您可以随时通过推送的信息取消订阅。如您想了解如何取消订阅，以及我们的隐私保护条款。请浏览我们的<a target="_blank" href="https://www.colliers.com/zh-cn/privacy-policy">隐私条款</a>
+。Colliers needs the contact information you provide to us to contact you about our products and services. You may unsubscribe from these communications at any time. For information on how to unsubscribe, as well as our privacy practices and commitment to protecting your privacy, please review our&nbsp;<a target="_blank" href="https://www.colliers.com/zh-cn/privacy-policy">Privacy Policy. </a>
+*<br><br>
+   备注：<b><font color="red">因服务器在海外，如遇到提交后无法下载的情况，请刷新页面后一定等待1-2分钟，待网页全部加载完毕后再点击提交。</font></b>
+ <b><font color="red">Due to the server being located overseas, if you encounter a situation where you are unable to download after submitting, please refresh the page and wait for 1-2 minutes until the webpage is fully loaded before clicking submit.</font></b>
+   </label></div>
+
+</div>
+</div></td></tr></table>
+ <div class="smartcapture-submit-button-wrapper">
+  <button type="submit" class="sc-button">提交Submit</button>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="smartcapture-script-4s1l7cinojk">
+    const scFormLoaded = function () {
+        window.ScForm.init({"gearID":"4s1l7cinojk","smartCaptureFormID":"0","sourceKey":"BD8B511A-57D8-4CBA-8F29-7E3D377BDC56","source":"dataExtension","triggeredSend":"","confirmationMessage":"<p style=\"text-align: center;\">\n\t<span style=\"font-size:20px;\">感谢您的关注，您可以<a alias=\"\" conversion=\"false\" data-assetid=\"802703\" data-linkto=\"document\" href=\"https://image.realestate.colliers.com/lib/fe3b117371640479711470/m/1/d00c1b47-d429-4151-8a7b-c2dbbc732a94.pdf\" rel=\"noopener\" style=\"text-decoration:none;\" target=\"_blank\" title=\"\">点击这里</a>下载中文报告。</span></p><p style=\"text-align: center;\">\n\t<span style=\"font-size:20px;\">Thank you for your interest, you can <a alias=\"\" conversion=\"false\" data-assetid=\"802702\" data-linkto=\"document\" href=\"https://image.realestate.colliers.com/lib/fe3b117371640479711470/m/1/5f47d11c-ed2f-4963-b893-94227001c4ec.pdf\" rel=\"noopener\" style=\"text-decoration:none;\" target=\"_blank\" title=\"\">click here</a> to download the English report.<br />\n\t<br />\n\t<a alias=\"点击浏览\" conversion=\"false\" data-linkto=\"https://\" href=\"https://www.colliers.com/zh-cn/services?utm_source=MarketingCloud&utm_medium=ReportDownload&utm_campaign=ResearchReport\" style=\"text-decoration:none;\" title=\"点击浏览\">点击浏览</a>高力国际所有业务介绍。<br />\n\t<a alias=\"Click here\" conversion=\"false\" data-linkto=\"https://\" href=\"https://www.colliers.com/en-cn/services?utm_source=MarketingCloud&utm_medium=ReportDownload&utm_campaign=ResearchReport\" style=\"text-decoration:none;\" title=\"Click here\">Click here</a> to visit Colliers business introduction</span></p><p style=\"text-align: center;\">\n\t<span style=\"font-size:20px;\">欢迎关注我们知乎号，获取关于高力的第一手资讯。</span></p><p style=\"text-align: center;\">\n\t<span style=\"font-size:20px;\">Follow Colliers on Zhihu, get our latest information.</span><br />\n\t<img alt=\"\" data-assetid=\"22199\" data-src=\"https://image.realestate.colliers.com/lib/fe3b117371640479711470/m/1/e946f5e9-4678-465f-9139-a251d8109f34.png\" height=\"150\" src=\"https://image.realestate.colliers.com/lib/fe3b117371640479711470/m/1/e946f5e9-4678-465f-9139-a251d8109f34.png\" style=\"height: 150px; width: 150px;\" width=\"150\" /></p>","buttonText":"提交Submit","formStyling":{"background-color":"transparent","margin-top":"0px","margin-right":"0px","margin-bottom":"0px","margin-left":"0px","padding-top":"0px","padding-right":"0px","padding-bottom":"0px","padding-left":"0px","text-align":"left"},"fieldStyling":{"width":"200px"},"buttonStyling":{"background-color":"#009DDC","border-color":"#009DDC","border-radius":"3px","border-style":"solid","-webkit-border-radius":"3px","-moz-border-radius":"3px","color":"#FFFFFF","font-family":"Arial, Helvetica, sans-serif","font-size":"16px","line-height":"normal","padding":"10px"},"onSubmitGotoUrlType":2});
+    };
+    let scAppDomain = 'cloudpages.mc-content.com';
+    let scAppBasePath = '/CloudPages';
+    (function () {
+        const appDomain = 'mc.s12.exacttarget.com';
+        if (appDomain.indexOf('qa') !== -1) {
+			scAppDomain = 'cloudpages-qa.mc-content.com';
+			scAppBasePath = '/CloudPages_V1';
+		}
+	}());
+	window.appDomain = window.appDomain || scAppDomain;
+	window.contentDetail = window.contentDetail || {"isSite":true,"mid":534004400,"eid":534003069,"pageID":12483,"siteID":682114,"isMobile":"false"};
+	if (!window.ScForm || !window.ScForm.init) {
+        const head = document.getElementsByTagName('head')[0];
+        const id = 'smartcapture-formjs-script';
+        const script = document.getElementById(id);
+        let domain = window.appDomain;
+        let el;
+        if (!script) {
+			if (domain) {
+				domain = '//' + domain;
+			}
+			el = document.createElement('script');
+			el.async = true;
+			el.id = id;
+			el.src = domain + scAppBasePath + '/lib/smartcapture-formjs.js';
+			el.onload = scFormLoaded;
+			head.appendChild(el);
+		} else {
+			if (script.addEventListener) {
+				script.addEventListener('load', scFormLoaded);
+			} else if (script.attachEvent) {
+				script.attachEvent('onload', scFormLoaded);
+			}
+		}
+	} else {
+		scFormLoaded();
+	}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<input name="SourceLv1" type="hidden" value="Official Website"><input name="SourceLv2" type="hidden" value="Research report"><input name="FormName" type="hidden" value="20260710EastChinaTieII"></form>
+</td></tr></table></td></tr></table>
+          </div>
+        </div>
+      <style>
+            .fuelux input[type=text],
+.fuelux input[type=number],
+.fuelux input[type=email] {
+ height: 40px !important;
+}
+              .sc-button,
+              button[type="submit"] {
+    background-color: #25408f !important;
+    border: none !important;
+    border-radius: 3px;
+    color: #faf8f8;
+    cursor: pointer;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    line-height: 12px;
+    font-size: 12px;
+    padding: 12px 24px; }
+            </style>
+    </div>
+  </body>
+  <script src="https://cloud.realestate.colliers.com/Form_Script"></script>
+</html>
