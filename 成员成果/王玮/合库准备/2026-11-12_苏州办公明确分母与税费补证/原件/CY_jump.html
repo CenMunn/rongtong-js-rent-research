@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Loading...</title>
+    <script src="/js/lib/jquery.min.js"></script> 
+	<script type="text/javascript" src="/js/webBuilderCommon.js"></script>
+    <script type="text/javascript" src="/js/pageView.js"></script>
+    <script language="javascript">
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+        $(function () {
+            var InfoID = GetQueryString('infoguid');
+			var categorynum = GetQueryString('categorynum');
+			var fzxname= GetQueryString('fzxname');
+			var obj={};
+	        obj.categorynum=categorynum;
+	        obj.infoid=InfoID; 
+			obj.siteguid=siteInfo.siteGuid;
+			obj.pageIndex=0;
+                $.ajax({
+                    url: siteInfo.projectName + "/JyxxSearchAction.action?cmd=getDetailPath",
+                    type: 'GET',
+                    dataType: 'json',
+					data:obj,
+                    success: function (msg) {
+                    	if(msg.custom.indexOf("http")==-1){
+                    		window.location.href = msg.custom+"?fzxname="+fzxname;
+                    	}else if(msg!=""&&msg!=null&&msg!="null"&&msg!="Null"){
+                    		window.location.href = msg.custom;
+                    	}else{
+							alert("不存在此公告详情地址，请联系维护人员检查是否存在此条公告！");
+						}
+                       
+                    }
+                });
+        })
+    </script>
+
+</head>
+<body>
+</body>
+</html>

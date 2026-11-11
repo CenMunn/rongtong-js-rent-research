@@ -1,0 +1,27 @@
+[
+  {
+    "file": "XS_P.html",
+    "url": "https://ggzy.suzhou.gov.cn/jyxx/003026/003026001/20260702/25704569742405.html",
+    "status": 200
+  },
+  {
+    "file": "WC_P.html",
+    "url": "https://ggzy.suzhou.gov.cn/jyxx/003026/003026001/20260728/25989439918533.html",
+    "status": 200
+  },
+  {
+    "file": "XS60_P.html",
+    "url": "https://ggzy.suzhou.gov.cn/jyxx/003026/003026001/20260821/26257670700485.html",
+    "status": 200
+  },
+  {
+    "file": "JM_C.html",
+    "url": "https://ggzy.suzhou.gov.cn/jyxx/003026/003026002/20260512/25139366423109.html",
+    "status": 404
+  },
+  {
+    "file": "GH_C.html",
+    "url": "https://ggzy.suzhou.gov.cn/jyxx/003026/003026002/20260715/25848536304965.html",
+    "status": 200
+  }
+]
