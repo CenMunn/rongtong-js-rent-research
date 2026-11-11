@@ -1,0 +1,12 @@
+{
+  "source_hashes_match": true,
+  "artifact_hashes_match": true,
+  "unique_source_record_uids": 1278,
+  "valid_link_candidates": 489,
+  "priority_records": 17,
+  "field_mappings": 196,
+  "market_indicators_separate": 13,
+  "original_28_field_cells_unchanged_WX_X03_B02": true,
+  "no_training_admissions_or_effective_rent_fills": true,
+  "rule_boundary_tests_passed": 7
+}
