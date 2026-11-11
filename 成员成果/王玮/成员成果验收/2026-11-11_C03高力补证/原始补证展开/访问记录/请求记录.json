@@ -1,0 +1,151 @@
+{
+  "timezone": "Asia/Shanghai",
+  "html_archive": [
+    {
+      "period": "2024H1",
+      "original_url": "https://www.colliers.com.cn/zh-cn/research/bc24-20240705eastchinatieii",
+      "service_url": "https://r.jina.ai/https://www.colliers.com.cn/zh-cn/research/bc24-20240705eastchinatieii",
+      "acquired_at": "2026-11-11T17:32:53.041231+08:00",
+      "requested_format": "html",
+      "status": 200,
+      "final_url": "https://r.jina.ai/https://www.colliers.com.cn/zh-cn/research/bc24-20240705eastchinatieii",
+      "content_type": "text/plain; charset=utf-8",
+      "file": "2024H1_DOM.html",
+      "bytes": 562375,
+      "sha256": "168309466bef498fe7a38686e5eae3d7d460a2671035b2217cce42c81b023dd4"
+    },
+    {
+      "period": "2025H2",
+      "original_url": "https://www.colliers.com.cn/zh-cn/research/20260108eastchinatieii",
+      "service_url": "https://r.jina.ai/https://www.colliers.com.cn/zh-cn/research/20260108eastchinatieii",
+      "acquired_at": "2026-11-11T17:32:53.042507+08:00",
+      "requested_format": "html",
+      "status": 200,
+      "final_url": "https://r.jina.ai/https://www.colliers.com.cn/zh-cn/research/20260108eastchinatieii",
+      "content_type": "text/plain; charset=utf-8",
+      "file": "2025H2_DOM.html",
+      "bytes": 557006,
+      "sha256": "c394a3b8112295fbe183fa4edddc6ef6a4cf62694e24c9d5ab13b3694dd104fb"
+    },
+    {
+      "period": "2026H1",
+      "original_url": "https://www.colliers.com.cn/zh-cn/research/20260710eastchinatieii",
+      "service_url": "https://r.jina.ai/https://www.colliers.com.cn/zh-cn/research/20260710eastchinatieii",
+      "acquired_at": "2026-11-11T17:32:53.042507+08:00",
+      "requested_format": "html",
+      "status": 200,
+      "final_url": "https://r.jina.ai/https://www.colliers.com.cn/zh-cn/research/20260710eastchinatieii",
+      "content_type": "text/plain; charset=utf-8",
+      "file": "2026H1_DOM.html",
+      "bytes": 571599,
+      "sha256": "2022c47ae24d851e6439b406a8720adde4bbc9de2198c484f4b36d54fdd10671"
+    }
+  ],
+  "direct_text_and_download_forms": [
+    {
+      "id": "2024H1_official",
+      "original_url": "https://www.colliers.com.cn/zh-cn/research/bc24-20240705eastchinatieii",
+      "acquired_at": "2026-11-11T17:31:37.374236+08:00",
+      "status": 403,
+      "final_url": "https://www.colliers.com.cn/zh-cn/research/bc24-20240705eastchinatieii",
+      "content_type": "text/html; charset=UTF-8",
+      "server": "cloudflare",
+      "challenge": "challenge",
+      "title": "Just a moment..."
+    },
+    {
+      "id": "2024H1_reader",
+      "original_url": "https://r.jina.ai/https://www.colliers.com.cn/zh-cn/research/bc24-20240705eastchinatieii",
+      "acquired_at": "2026-11-11T17:31:37.375235+08:00",
+      "status": 200,
+      "final_url": "https://r.jina.ai/https://www.colliers.com.cn/zh-cn/research/bc24-20240705eastchinatieii",
+      "content_type": "text/plain; charset=utf-8",
+      "server": "cloudflare",
+      "challenge": null,
+      "file": "2024H1_reader.txt",
+      "bytes": 11970,
+      "sha256": "c230e49563900c6bf907904ff48e9e2c33b6effe5fed0d7712b4122e5e4b2dff"
+    },
+    {
+      "id": "2024H1_form",
+      "original_url": "https://cloud.realestate.colliers.com/20240705EastChinaTieII",
+      "acquired_at": "2026-11-11T17:31:37.379613+08:00",
+      "status": 200,
+      "final_url": "https://cloud.realestate.colliers.com/20240705EastChinaTieII",
+      "content_type": "text/html; charset=utf-8",
+      "server": null,
+      "challenge": null,
+      "title": ""
+    },
+    {
+      "id": "2025H2_official",
+      "original_url": "https://www.colliers.com.cn/zh-cn/research/20260108eastchinatieii",
+      "acquired_at": "2026-11-11T17:31:37.376236+08:00",
+      "status": 403,
+      "final_url": "https://www.colliers.com.cn/zh-cn/research/20260108eastchinatieii",
+      "content_type": "text/html; charset=UTF-8",
+      "server": "cloudflare",
+      "challenge": "challenge",
+      "title": "Just a moment..."
+    },
+    {
+      "id": "2025H2_reader",
+      "original_url": "https://r.jina.ai/https://www.colliers.com.cn/zh-cn/research/20260108eastchinatieii",
+      "acquired_at": "2026-11-11T17:31:37.377235+08:00",
+      "status": 200,
+      "final_url": "https://r.jina.ai/https://www.colliers.com.cn/zh-cn/research/20260108eastchinatieii",
+      "content_type": "text/plain; charset=utf-8",
+      "server": "cloudflare",
+      "challenge": null,
+      "file": "2025H2_reader.txt",
+      "bytes": 12710,
+      "sha256": "c34f23381d98f53f1bfaa05b818819ac91fae99c9fd2f3fd542decafad147ac3"
+    },
+    {
+      "id": "2025H2_form",
+      "original_url": "https://cloud.realestate.colliers.com/20260108EastChinaTieII",
+      "acquired_at": "2026-11-11T17:31:37.379613+08:00",
+      "status": 200,
+      "final_url": "https://cloud.realestate.colliers.com/20260108EastChinaTieII",
+      "content_type": "text/html; charset=utf-8",
+      "server": null,
+      "challenge": null,
+      "title": ""
+    },
+    {
+      "id": "2026H1_official",
+      "original_url": "https://www.colliers.com.cn/zh-cn/research/20260710eastchinatieii",
+      "acquired_at": "2026-11-11T17:31:37.377235+08:00",
+      "status": 403,
+      "final_url": "https://www.colliers.com.cn/zh-cn/research/20260710eastchinatieii",
+      "content_type": "text/html; charset=UTF-8",
+      "server": "cloudflare",
+      "challenge": "challenge",
+      "title": "Just a moment..."
+    },
+    {
+      "id": "2026H1_reader",
+      "original_url": "https://r.jina.ai/https://www.colliers.com.cn/zh-cn/research/20260710eastchinatieii",
+      "acquired_at": "2026-11-11T17:31:37.378611+08:00",
+      "status": 200,
+      "final_url": "https://r.jina.ai/https://www.colliers.com.cn/zh-cn/research/20260710eastchinatieii",
+      "content_type": "text/plain; charset=utf-8",
+      "server": "cloudflare",
+      "challenge": null,
+      "file": "2026H1_reader.txt",
+      "bytes": 12741,
+      "sha256": "2afa5b48b6b457dda0298eefd60cca2c382287a4942d63c360adb464dc808349"
+    },
+    {
+      "id": "2026H1_form",
+      "original_url": "https://cloud.realestate.colliers.com/20260710EastChinaTieII",
+      "acquired_at": "2026-11-11T17:31:39.706991+08:00",
+      "status": 200,
+      "final_url": "https://cloud.realestate.colliers.com/20260710EastChinaTieII",
+      "content_type": "text/html; charset=utf-8",
+      "server": null,
+      "challenge": null,
+      "title": ""
+    }
+  ]
+}

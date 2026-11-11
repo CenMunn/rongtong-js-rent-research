@@ -1,0 +1,18 @@
+{
+  "period": "2024H1",
+  "url": "https://www.colliers.com.cn/zh-cn/research/bc24-20240705eastchinatieii",
+  "accessed_at": "2026-11-11T09:30:32.863Z",
+  "responses": [
+    {
+      "status": 307
+    },
+    {
+      "status": 403,
+      "server": "cloudflare",
+      "challenge": "challenge"
+    }
+  ],
+  "title": "请稍候…",
+  "hasReport": false,
+  "visible_message": "www.colliers.com.cn\n正在进行安全验证\n\n本网站使用安全服务防护恶意自动程序。在验证您不是自动程序期间，将显示此页面。\n\nRay ID: a58c477dab3895db\n由 Cloudflare 提供的性能和安全服务\n隐私"
+}

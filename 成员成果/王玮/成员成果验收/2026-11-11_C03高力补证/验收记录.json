@@ -1,0 +1,84 @@
+{
+  "received_at": "2026-11-11T21:56:44.993489+08:00",
+  "source_zip": "D:\\xwechat_files\\wxid_vtmh9jyl71mi22_f928\\msg\\file\\2026-11\\C03_20261111_高力补证.zip",
+  "source_zip_sha256": "a0b99e2de8495d7f8a2952b119b1e2a2788cfef595e43724f785eb58636a3754",
+  "source_members": [
+    {
+      "文件": "官网正文/2024H1_DOM.html",
+      "字节": 562375,
+      "SHA256": "168309466bef498fe7a38686e5eae3d7d460a2671035b2217cce42c81b023dd4"
+    },
+    {
+      "文件": "官网正文/2024H1_reader.txt",
+      "字节": 11970,
+      "SHA256": "c230e49563900c6bf907904ff48e9e2c33b6effe5fed0d7712b4122e5e4b2dff"
+    },
+    {
+      "文件": "官网正文/2025H2_DOM.html",
+      "字节": 557006,
+      "SHA256": "c394a3b8112295fbe183fa4edddc6ef6a4cf62694e24c9d5ab13b3694dd104fb"
+    },
+    {
+      "文件": "官网正文/2025H2_reader.txt",
+      "字节": 12710,
+      "SHA256": "c34f23381d98f53f1bfaa05b818819ac91fae99c9fd2f3fd542decafad147ac3"
+    },
+    {
+      "文件": "官网正文/2026H1_DOM.html",
+      "字节": 571599,
+      "SHA256": "2022c47ae24d851e6439b406a8720adde4bbc9de2198c484f4b36d54fdd10671"
+    },
+    {
+      "文件": "官网正文/2026H1_reader.txt",
+      "字节": 12741,
+      "SHA256": "2afa5b48b6b457dda0298eefd60cca2c382287a4942d63c360adb464dc808349"
+    },
+    {
+      "文件": "补证说明与观察ID索引.md",
+      "字节": 3890,
+      "SHA256": "eebe2165d3ecb8e7141bec8a0ce532ff66406de33f5fcda97c357be4d3a5b777"
+    },
+    {
+      "文件": "访问记录/2024H1_browser.json",
+      "字节": 621,
+      "SHA256": "5ffb6efe6150932af51be9fb82ec05e6847bb3eb1bd5e0e945d1db462e3927b2"
+    },
+    {
+      "文件": "访问记录/2024H1_访问结果.png",
+      "字节": 28177,
+      "SHA256": "c7044ef30c411c5f240a763b0d711db9999ba264ce951e1b6a646d1094f5e729"
+    },
+    {
+      "文件": "访问记录/2025H2_browser.json",
+      "字节": 616,
+      "SHA256": "78d334083c2854627b9c25b4c13ba415e4c0919e52615e7bd5bd6d481e3e18cb"
+    },
+    {
+      "文件": "访问记录/2025H2_访问结果.png",
+      "字节": 28029,
+      "SHA256": "020e37c768dd5202e148739f676cc558810f783a4eac1ed3ac28012f85e5b412"
+    },
+    {
+      "文件": "访问记录/2026H1_browser.json",
+      "字节": 616,
+      "SHA256": "6ee1444b021b2cc4834122cb3b6dd517ea22c0853b3b85530108ff90b833cac7"
+    },
+    {
+      "文件": "访问记录/2026H1_访问结果.png",
+      "字节": 27962,
+      "SHA256": "43cc8846b9a4740b48045ea049d223f71eab80f59ed1c5dad9933cda28c93c04"
+    },
+    {
+      "文件": "访问记录/请求记录.json",
+      "字节": 6514,
+      "SHA256": "6ea6cd1540b3ce385092e321f60f49d20f9ebc74486eed1aa7f1cee01d2763a0"
+    }
+  ],
+  "hash_checked_archives": 6,
+  "observations_checked": 6,
+  "screenshots_visually_checked": 3,
+  "fresh_network_check": false,
+  "official_pdf_obtained": false,
+  "member_manual_signoff_added": false,
+  "protected_originals_unchanged": true
+}
