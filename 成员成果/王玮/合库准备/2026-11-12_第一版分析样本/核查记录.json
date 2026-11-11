@@ -1,0 +1,18 @@
+{
+  "source": "成员成果\\王玮\\合库准备\\2026-11-12_统一分层可用性视图\\18事件统一分层可用性视图.csv",
+  "source_sha256": "3d5a52505a7c182e1f1ff222052708b0695e03f9cfbc7246c040fa73d1b8a386",
+  "decisions": 18,
+  "core": 6,
+  "conditional_extra": 3,
+  "contexts": 7,
+  "held": 2,
+  "unique_asset_groups_in_analysis": 9,
+  "core_city_counts": {
+    "南京": 1,
+    "苏州": 5
+  },
+  "exploratory_pipeline_possible": true,
+  "reliable_generalization_assessment_supported": false,
+  "model_fitted": false,
+  "member_signoff_added": false
+}
