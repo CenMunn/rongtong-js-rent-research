@@ -1,0 +1,19 @@
+{
+  "source_hashes": {
+    "成员成果/王玮/合库准备/2026-11-12_合库准备初版/合库候选_28字段及来源.csv": "5d3336809eeee34c791d3163813d441c6f9d8492fe2bf8e76eb7d44d9ecb4246",
+    "成员成果/王玮/合库准备/2026-11-12_合库准备初版/首批17条优先复筛.csv": "03680c711ad3e4ad2449cee27c4193020198e8df88d1938136da4e9f3845b0ca",
+    "成员成果/王玮/合库准备/2026-11-12_合库准备初版/资产观察关联候选.csv": "cea8fc452c84c20b1e39ca624917b5e5d86fbc47948d79d1969748a02ce57758",
+    "共享资料/原文抽核观察.csv": "4b10322e7664b86accf721b53104207c9bf159b8971a7d4540f01f360dc12d77",
+    "成员成果/游依宸/C02_汉桑禾盛/C02_结构化历史合同表.csv": "c2a40b7602ab621b7807581b1929ecc19909e8c7f797f97e9573649694ae5c48"
+  },
+  "priority_source_records": 17,
+  "representative_events": 12,
+  "provisional_asset_scopes": 10,
+  "public_transaction_events": 8,
+  "contract_periods": 4,
+  "contract_asset_scopes": 2,
+  "all_17_price_and_nominal_checks_passed": true,
+  "raw_records_deleted": 0,
+  "member_signoff_added": false,
+  "training_performed": false
+}

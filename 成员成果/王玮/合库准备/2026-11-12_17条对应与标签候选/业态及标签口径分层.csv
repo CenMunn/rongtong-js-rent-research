@@ -1,0 +1,10 @@
+﻿业态层,标签层,价格事件数,限制
+沿街商业披露范围,COMMERCIAL_TRANSACTION,1,分层候选，不合并训练；同资产多期不是独立资产
+校园商铺,CAMPUS_TRANSACTION,3,分层候选，不合并训练；同资产多期不是独立资产
+办公（公告用途）,OFFICE_TRANSACTION_FEE_CONFLICT,1,分层候选，不合并训练；同资产多期不是独立资产
+办公三室合包（公告用途）,OFFICE_TRANSACTION,1,分层候选，不合并训练；同资产多期不是独立资产
+商业可比候选，用途未在本批独立确认,COMMERCIAL_TRANSACTION_DATE_HOLD,1,分层候选，不合并训练；同资产多期不是独立资产
+商业可比候选，用途未在本批独立确认,COMMERCIAL_TRANSACTION,1,分层候选，不合并训练；同资产多期不是独立资产
+仓储、包装、生产加工（披露用途）,INDUSTRIAL_CONTRACT_UNKNOWN_FEES,2,分层候选，不合并训练；同资产多期不是独立资产
+厂房及配套（披露用途）,INDUSTRIAL_CONTRACT_UNKNOWN_FEES,1,分层候选，不合并训练；同资产多期不是独立资产
+厂房及配套（披露用途）,INDUSTRIAL_CONTRACT_GROSS_BUNDLE,1,分层候选，不合并训练；同资产多期不是独立资产
