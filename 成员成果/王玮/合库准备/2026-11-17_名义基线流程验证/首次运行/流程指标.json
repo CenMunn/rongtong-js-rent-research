@@ -1,0 +1,11 @@
+{
+  "n_observations": 3,
+  "n_buildings": 3,
+  "n_folds": 3,
+  "MAE": "31.34412081984897518878101403",
+  "RMSE": "33.80115860465650920375066652",
+  "unit": "元/披露㎡·月",
+  "scope": "仅流程输出，不是实际定价精度；不作目标报价",
+  "folds_with_later_training_dates": 2,
+  "target_predictions_generated": 0
+}

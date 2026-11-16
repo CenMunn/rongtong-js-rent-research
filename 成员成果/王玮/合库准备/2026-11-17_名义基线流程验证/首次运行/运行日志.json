@@ -1,0 +1,20 @@
+{
+  "time_Asia_Shanghai": "2026-11-17T00:57:30.908628+08:00",
+  "python": "3.14.4",
+  "script_SHA256": "9e76212e6d6a6fe42c517802799a348485ad9cf4ecbb261bb59b2d1b9c4919ca",
+  "input_SHA256": "9deedbb63e4d69b66047fe149df522a9c6d81f69ef201787716bc52f9cc9655b",
+  "protocol_SHA256": "ef74fd336568a1ff80deb9edae3538eeb4099c7aedaa8d172cfd6b2886c5d69d",
+  "network_used": false,
+  "original_source_modified": false,
+  "teacher_review": "第一阶段材料待老师审阅反馈；非默认认可",
+  "checks": [
+    "input_hashes",
+    "unique_ids",
+    "positive_denominators",
+    "recomputed_labels",
+    "building_disjoint",
+    "one_test_per_observation",
+    "temporal_warning",
+    "no_target_prediction"
+  ]
+}

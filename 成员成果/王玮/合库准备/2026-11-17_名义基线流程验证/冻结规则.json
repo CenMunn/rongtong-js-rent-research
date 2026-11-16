@@ -1,0 +1,22 @@
+{
+  "version": "nominal-pipeline-1.0",
+  "frozen_date": "2026-11-17",
+  "scope": "流程验证，不评价实际定价能力",
+  "teacher_review": "第一阶段材料待老师审阅反馈；非默认认可",
+  "input": "冻结输入_3观察.csv",
+  "n_observations": 3,
+  "n_buildings": 3,
+  "split": "leave_one_building_out",
+  "predictor": "training_observation_median",
+  "label": "rent_annual_cny / 12 / area_disclosed_sqm",
+  "currency_unit": "元/披露㎡·月",
+  "metrics": [
+    "MAE",
+    "RMSE"
+  ],
+  "temporal_scope": "回顾性楼宇留出；允许训练日期晚于测试日期，必须逐折显式标记；不宣称时间外推",
+  "tuning": "无参数选择，无调参、无根据结果删样本",
+  "target_pricing": false,
+  "uncertainty": "三楼宇、税费及面积类型未统一、挂牌条款非合同；无可信泛化精度估计",
+  "future_data": "新增原件或老师意见另存新批次，不覆盖冻结输入"
+}

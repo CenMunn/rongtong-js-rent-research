@@ -1,0 +1,4 @@
+﻿id,building_group,city,area_disclosed_sqm,area_basis,rent_annual_cny,y_nominal_cny_per_disclosed_sqm_month,transaction_date,fee_group,use_group,tax_status,allowed_usage,source_observation_id
+SZ-OFF-SCJRZ20260793,城市生活广场A幢,苏州,498,A_DISCLOSED_UNTYPED,418320,70.000000,2026-11-04,F_SEPARATE,U_OFFICE_DISCLOSED,UNKNOWN,仅读表、楼宇切分、训练侧中位数流程检查；非正式价格回归,SZ-OFF-SCJRZ20260793
+CAND-E06,人民路1058号,苏州,103,A_DISCLOSED_UNTYPED,74200,60.032362,2026-07-06,F_SEPARATE,U_OFFICE_DISCLOSED,UNKNOWN,仅读表、楼宇切分、训练侧中位数流程检查；非正式价格回归,B02-SZ04-C
+SZ-OFF-SCJR20261830,香山慧境商务中心60幢,苏州,2704.1,A_DISCLOSED_UNTYPED,584085.6,18.000000,2026-08-31,F_SEPARATE,U_OFFICE_DISCLOSED,UNKNOWN,仅流程演示；分母/税费未统一，不提供实际定价能力评价,SZ-OFF-SCJR20261830
